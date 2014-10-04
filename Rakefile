@@ -2,8 +2,8 @@
 
 require 'rubygems'
 require 'rake'
-
 require 'jeweler'
+
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "inuit-rails"
@@ -17,3 +17,7 @@ end
 Jeweler::RubygemsDotOrgTasks.new
 
 task :default => :gemspec
+
+task :bower do
+  `bower update 'inuit-starter-kit'`
+end

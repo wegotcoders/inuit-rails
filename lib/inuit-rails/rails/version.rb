@@ -1,3 +1,3 @@
 module InuitRails
-  VERSION = File.read 'VERSION'
+  VERSION = '0.2.8'
 end

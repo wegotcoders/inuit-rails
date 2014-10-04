@@ -1,0 +1,21 @@
+{
+  "name": "inuit-rails",
+  "version": "1.1.0",
+  "homepage": "https://github.com/dmgarland/inuit-rails",
+  "authors": [
+    "Dan Garland <dan@dangarland.co.uk>"
+  ],
+  "description": "Inuit CSS framework",
+  "main": "inuit.scss",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit-starter-kit": "~0.2.8"
+  }
+}

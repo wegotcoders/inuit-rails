@@ -19,5 +19,5 @@ Jeweler::RubygemsDotOrgTasks.new
 task :default => :gemspec
 
 task :bower do
-  `bower update 'inuit-starter-kit'`
+  `bower update`
 end

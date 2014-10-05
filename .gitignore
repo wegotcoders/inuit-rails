@@ -47,7 +47,6 @@ pkg
 
 # For rubinius:
 #*.rbc
-
 vendor/assets/stylesheets/**/*.json
 vendor/assets/stylesheets/**/*.md
 vendor/assets/stylesheets/**/*.gitignore

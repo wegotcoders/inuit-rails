@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Dan Garland"]
-  s.date = "2014-10-04"
+  s.date = "2014-10-05"
   s.description = "A Rails enginge that permits the use of inuit css files within a Rails application. "
   s.email = "dan@dangarland.co.uk"
   s.extra_rdoc_files = [
@@ -31,13 +31,16 @@ Gem::Specification.new do |s|
     "lib/inuit-rails/rails.rb",
     "lib/inuit-rails/rails/engine.rb",
     "lib/inuit-rails/rails/version.rb",
-    "vendor/stylesheets/inuit-box-sizing/_generic.box-sizing.scss",
-    "vendor/stylesheets/inuit-defaults/_settings.defaults.scss",
-    "vendor/stylesheets/inuit-functions/_tools.functions.scss",
-    "vendor/stylesheets/inuit-mixins/_tools.mixins.scss",
-    "vendor/stylesheets/inuit-normalize/_generic.normalize.scss",
-    "vendor/stylesheets/inuit-page/_base.page.scss",
-    "vendor/stylesheets/inuit.scss"
+    "vendor/assets/stylesheets/inuit-box-sizing/_generic.box-sizing.scss",
+    "vendor/assets/stylesheets/inuit-buttons/_objects.buttons.scss",
+    "vendor/assets/stylesheets/inuit-defaults/_settings.defaults.scss",
+    "vendor/assets/stylesheets/inuit-functions/_tools.functions.scss",
+    "vendor/assets/stylesheets/inuit-headings/_base.headings.scss",
+    "vendor/assets/stylesheets/inuit-layout/_objects.layout.scss",
+    "vendor/assets/stylesheets/inuit-mixins/_tools.mixins.scss",
+    "vendor/assets/stylesheets/inuit-normalize/_generic.normalize.scss",
+    "vendor/assets/stylesheets/inuit-page/_base.page.scss",
+    "vendor/assets/stylesheets/inuit.scss"
   ]
   s.homepage = "http://github.com/dmgarland/inuit-rails"
   s.licenses = ["MIT"]

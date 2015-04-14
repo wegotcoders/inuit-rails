@@ -51,3 +51,5 @@ vendor/assets/stylesheets/**/*.json
 vendor/assets/stylesheets/**/*.md
 vendor/assets/stylesheets/**/*.gitignore
 vendor/assets/stylesheets/**/*.bower.json
+
+Gemfile.lock

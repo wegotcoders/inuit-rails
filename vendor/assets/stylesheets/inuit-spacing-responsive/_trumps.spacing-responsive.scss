@@ -31,6 +31,7 @@ $inuit-enable-responsive-paddings--large:           false !default;
 $inuit-enable-responsive-paddings--huge:            false !default;
 
 $inuit-enable-responsive-paddings--none:            false !default;
+$inuit-generate-spacing-alias: null;
 
 
 
@@ -44,7 +45,7 @@ $inuit-enable-responsive-paddings--none:            false !default;
     // Loop through our previously-defined breakpoints.
     @each $breakpoint in $breakpoints {
 
-        $inuit-generate-spacing-alias:      nth($breakpoint, 1) !global;
+        $inuit-generate-spacing-alias:      nth($breakpoint, 1);
         $inuit-generate-spacing-condition:  nth($breakpoint, 2);
 
         // This isn’t ideal, but we definitely don’t want to generate widths
@@ -58,7 +59,7 @@ $inuit-enable-responsive-paddings--none:            false !default;
         } // Close retina check.
 
         // Take the global variable back out of scope.
-        $inuit-generate-spacing-alias: null !global;
+        $inuit-generate-spacing-alias: null;
 
     } // Close breakpoints loop.
 

@@ -6,6 +6,9 @@
  * The box object simply boxes off content.
  */
 
+// HACK ALERT - Without this I can't get sprockets to precompile on my other project :/
+$inuit-namespace: null;
+
 // Predefine the variables below in order to alter and enable specific features.
 $inuit-box-namespace:       $inuit-namespace !default;
 

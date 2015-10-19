@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+
+$inuit-widths-namespace: $inuit-namespace !default;
+
+@mixin inuit-widths($inuit-widths-denominator, $inuit-widths-breakpoint: null) {
+  @if ($inuit-widths-denominator == 1) {
+    .#{$inuit-widths-namespace}#{$inuit-widths-breakpoint}-one-whole {
+      width: 100%;
+    }
+
+  } @else {
+
+    @for $inuit-widths-numerator from 1 to $inuit-widths-denominator {
+      .#{$inuit-widths-namespace}#{$inuit-widths-breakpoint}-#{numerator-to-word($inuit-widths-columns-responsive, $inuit-widths-numerator)}-#{denominator-to-word($inuit-widths-columns-responsive, $inuit-widths-numerator, $inuit-widths-denominator)} {
+        width: ($inuit-widths-numerator / $inuit-widths-denominator) * 100% !important;
+      }
+
+      .#{$inuit-widths-namespace}#{$inuit-widths-breakpoint}-offset-#{numerator-to-word($inuit-widths-columns-responsive, $inuit-widths-numerator)}-#{denominator-to-word($inuit-widths-columns-responsive, $inuit-widths-numerator, $inuit-widths-denominator)} {
+        margin-left: ($inuit-widths-numerator / $inuit-widths-denominator) * 100% !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+# Site settings
+title: The We Got Coders HTML and CSS Style Guide
+email: hello@wegotcoders.com
+description: >
+  The We Got Coders HTML and CSS Style Guide is a set of conventions for
+  building markup with the Inuit CSS framework in such a way that it is
+  clearly structured and easy to maintain.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: WeGotCoders
+github_username: wegotcoders
+
+# Build settings
+markdown: kramdown

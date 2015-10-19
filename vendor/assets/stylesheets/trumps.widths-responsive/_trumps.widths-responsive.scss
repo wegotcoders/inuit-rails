@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #WIDTHS-RESPONSIVE
+\*------------------------------------*/
+
+$inuit-widths-columns-responsive: (
+  1   'one'     'whole'     'wholes',
+  2   'two'     'half'      'halves',
+  3   'three'   'third'     'thirds',
+  4   'four'    'quarter'   'quarters',
+  5   'five'    'fifth'     'fifths'
+) !default;
+
+@each $breakpoint in $breakpoints {
+  $alias: nth($breakpoint, 1);
+
+  @include media-query($alias) {
+    @each $inuit-widths-column in $inuit-widths-columns-responsive {
+      @include inuit-widths(nth($inuit-widths-column, 1), $alias);
+    }
+  }
+}

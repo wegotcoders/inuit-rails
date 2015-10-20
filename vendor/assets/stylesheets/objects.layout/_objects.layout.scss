@@ -45,10 +45,18 @@ $inuit-layout-sizes: (
   $enabler: nth($inuit-layout-size, 1);
 
   @if ($enabler == true) {
+
     $modifier:       nth($inuit-layout-size, 2);
     $modifier-value: nth($inuit-layout-size, 3);
 
     @include layout-with-gutter($modifier, $modifier-value)
+  }
+}
+
+@if ($inuit-enable-layout--center == true) {
+  .#{$inuit-layout-namespace}layout--center,
+  %#{$inuit-layout-namespace}layout--center {
+    margin: 0 auto;
   }
 }
 
@@ -85,19 +93,5 @@ $inuit-layout-sizes: (
     > %#{$inuit-layout-namespace}layout__item {
       vertical-align: bottom;
     }
-  }
-}
-
-@if ($inuit-enable-layout--right == true) {
-  .#{$inuit-layout-namespace}layout--right,
-  %#{$inuit-layout-namespace}layout--right {
-    text-align: right;
-  }
-}
-
-@if ($inuit-enable-layout--center == true) {
-  .#{$inuit-layout-namespace}layout--center,
-  %#{$inuit-layout-namespace}layout--center {
-    text-align: center;
   }
 }

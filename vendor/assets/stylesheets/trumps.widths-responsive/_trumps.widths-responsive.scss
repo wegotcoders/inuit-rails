@@ -7,7 +7,12 @@ $inuit-widths-columns-responsive: (
   2   'two'     'half'      'halves',
   3   'three'   'third'     'thirds',
   4   'four'    'quarter'   'quarters',
-  5   'five'    'fifth'     'fifths'
+  5   'five'    'fifth'     'fifths',
+  6   'six'     'sixth'     'sixths',
+  7   'seven'   'seventh'   'sevenths',
+  8   'eight'   'eighth'    'eighths',
+  9   'nine'    'ninth'     'ninths',
+  10  'ten'     'tenth'     'tenths'
 ) !default;
 
 @each $breakpoint in $breakpoints {

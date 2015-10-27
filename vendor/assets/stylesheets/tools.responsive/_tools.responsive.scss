@@ -2,6 +2,7 @@
     #TOOLS-RESPONSIVE
 \*------------------------------------*/
 
+$inuit-responsive-settings: false !default;
 @if ($inuit-responsive-settings == false) {
   @warn "Oops! Have you included a responsive settings file?"
 }

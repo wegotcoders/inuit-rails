@@ -10,10 +10,12 @@
  *    using `display: block;`.
  */
 img {
-  max-width: 100%; /* [1] */
-  font-style: italic; /* [2] */
-  vertical-align: middle; /* [3] */
+    max-width: 100%; /* [1] */
+    font-style: italic; /* [2] */
+    vertical-align: middle; /* [3] */
 }
+
+
 
 /**
  * 1. Google Maps breaks if `max-width: 100%` acts upon it; use their selector
@@ -24,5 +26,5 @@ img {
 .gm-style img, /* [1] */
 img[width], /* [2] */
 img[height] {  /* [2] */
-  max-width: none;
+    max-width: none;
 }

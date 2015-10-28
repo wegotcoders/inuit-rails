@@ -2,25 +2,34 @@
     #WIDTHS-RESPONSIVE
 \*------------------------------------*/
 
+/**
+ * Responsive width classes based on your responsive settings.
+ */
+
+// By default we will create wholes, halves, thirds, quarters, and fifths.
+// Predefine this Map to override.
 $inuit-widths-columns-responsive: (
-  1   'one'     'whole'     'wholes',
-  2   'two'     'half'      'halves',
-  3   'three'   'third'     'thirds',
-  4   'four'    'quarter'   'quarters',
-  5   'five'    'fifth'     'fifths',
-  6   'six'     'sixth'     'sixths',
-  7   'seven'   'seventh'   'sevenths',
-  8   'eight'   'eighth'    'eighths',
-  9   'nine'    'ninth'     'ninths',
-  10  'ten'     'tenth'     'tenths'
+    1,
+    2,
+    3,
+    4,
+    5,
 ) !default;
 
+// Loop over our breakpoints defined in _settings.responsive.scss
 @each $breakpoint in $breakpoints {
+
+  // Get the name of the breakpoint.
   $alias: nth($breakpoint, 1);
 
   @include media-query($alias) {
+
+    // Loop through each of our column sizes and generate its responsive width
+    // classes.
     @each $inuit-widths-column in $inuit-widths-columns-responsive {
-      @include inuit-widths(nth($inuit-widths-column, 1), $alias);
+      @include inuit-widths($inuit-widths-column, -#{$alias});
     }
+
   }
+
 }

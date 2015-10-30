@@ -1,11 +1,26 @@
-.t-center {
-  text-align: center;
-}
+@if ($enable-wgc-wrapper == true) {
 
-.t-uppercase {
-  text-transform: uppercase;
-}
+  .t-center {
+    text-align: center;
+  }
 
-.t-dec-none {
-  text-decoration: none;
+  .t-justify {
+    text-align: justify;
+  }
+
+  .t-left {
+    text-align: left;
+  }
+
+  .t-right {
+    text-align: right;
+  }
+
+  .t-uppercase {
+    text-transform: uppercase;
+  }
+
+  .t-dec-none {
+    text-decoration: none;
+  }
 }

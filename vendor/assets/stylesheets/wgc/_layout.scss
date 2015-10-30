@@ -1,11 +1,14 @@
-.l-fl {
-  float: left;
-}
+@if ($enable-wgc-wrapper == true) {
 
-.l-fr {
-  float: right;
-}
+  .l-fl {
+    float: left;
+  }
 
-.l-inline-block {
-  display: inline-block;
+  .l-fr {
+    float: right;
+  }
+
+  .l-inline-block {
+    display: inline-block;
+  }
 }

@@ -1,24 +1,27 @@
-$pallete: (
-  white: #fff,
-  pale-blue: #f5ffff,
-  light-gray: #adadad,
-  black: #000
-);
+@if ($enable-wgc-wrapper == true) {
 
-@each $name, $colour in $pallete {
-  .c-#{ $name } {
-    color: $colour;
+  $pallete: (
+    white: #fff,
+    pale-blue: #f5ffff,
+    light-gray: #adadad,
+    black: #000
+  );
+
+  @each $name, $colour in $pallete {
+    .c-#{ $name } {
+      color: $colour;
+    };
+
+    .bg-#{ $name } {
+      background-color: $colour;
+    };
+
+    .b-#{ $name } {
+      border-color: $colour;
+    };
   };
 
-  .bg-#{ $name } {
-    background-color: $colour;
-  };
-
-  .b-#{ $name } {
-    border-color: $colour;
-  };
-};
-
-.bg-transparent {
-  background-color: transparent;
+  .bg-transparent {
+    background-color: transparent;
+  }
 }

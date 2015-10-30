@@ -1,76 +1,12 @@
-$inuit-widths-columns-responsive: (
-  1   'one'       'whole'       'wholes',
-  2   'two'       'half'        'halves',
-  3   'three'     'third'       'thirds',
-  4   'four'      'quarter'     'quarters',
-  5   'five'      'fifth'       'fifths',
-  6   'six'       'sixth'       'sixths',
-  7   'seven'     'seventh'     'sevenths',
-  8   'eight'     'eighth'      'eighths',
-  9   'nine'      'ninth'       'ninths',
-  10  'ten'       'tenth'       'tenths',
-  11  'eleven'    'eleventh'    'elevenths',
-  12  'twelve'    'twelfth'     'twelfths',
-  13  'thirteen'  'thirteenth'  'thirteenths',
-  14  'fourteen'  'fourteenth'  'fourteenths',
-  15  'fifteen'   'fifteenth'   'fifteenths',
-  16  'sixteen'   'sixteenth'   'sixteenths',
-  17  'seventeen' 'seventeenth' 'seventeenths',
-  18  'eighteen'  'eighteenth'  'eighteenths',
-  19  'nineteen'  'nineteenth'  'nineteenths',
-  20  'twenty'    'twentieth'   'twentieths'
-) !default;
+@if ($enable-wgc-wrapper == true) {
 
-@function numerator-to-word($index, $numerator) {
-  @each $row in $index {
-    @if (nth($row, 1) == $numerator) {
-      @return nth($row, 2);
-    }
-  }
-}
+  @each $wgc-breakpoint in $wgc-breakpoints {
+    $alias: nth($wgc-breakpoint, 1);
 
-@function denominator-to-word($index, $numerator, $denominator) {
-  @each $row in $index {
-    @if nth($row, 1) == $denominator {
-      @if ($numerator == 1) {
-        @return nth($row, 3);
-
-      } @else {
-
-        @return nth($row, 4);
+    @include wgc-media-query($alias) {
+      @each $inuit-widths-column in $wgc-widths-columns-responsive {
+        @include wgc-widths(nth($inuit-widths-column, 1), $alias);
       }
-    }
-  }
-}
-
-$inuit-widths-namespace: $inuit-namespace !default;
-
-@mixin wgc-widths($inuit-widths-denominator, $inuit-widths-breakpoint: null) {
-  @if ($inuit-widths-denominator == 1) {
-    .#{$inuit-widths-namespace}#{$inuit-widths-breakpoint}-one-whole {
-      width: 100%;
-    }
-
-  } @else {
-
-    @for $inuit-widths-numerator from 1 to $inuit-widths-denominator {
-      .#{$inuit-widths-namespace}#{$inuit-widths-breakpoint}-#{numerator-to-word($inuit-widths-columns-responsive, $inuit-widths-numerator)}-#{denominator-to-word($inuit-widths-columns-responsive, $inuit-widths-numerator, $inuit-widths-denominator)} {
-        width: ($inuit-widths-numerator / $inuit-widths-denominator) * 100% !important;
-      }
-
-      .#{$inuit-widths-namespace}#{$inuit-widths-breakpoint}-offset-#{numerator-to-word($inuit-widths-columns-responsive, $inuit-widths-numerator)}-#{denominator-to-word($inuit-widths-columns-responsive, $inuit-widths-numerator, $inuit-widths-denominator)} {
-        margin-left: ($inuit-widths-numerator / $inuit-widths-denominator) * 100% !important;
-      }
-    }
-  }
-}
-
-@each $breakpoint in $breakpoints {
-  $alias: nth($breakpoint, 1);
-
-  @include media-query($alias) {
-    @each $inuit-widths-column in $inuit-widths-columns-responsive {
-      @include wgc-widths(nth($inuit-widths-column, 1), $alias);
     }
   }
 }

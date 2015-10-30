@@ -1,19 +1,34 @@
-.b-radius {
-  border-radius: 4px;
-}
+@if ($enable-wgc-wrapper == true) {
 
-.b-thin {
-  border-width: thin;
-}
+  .b-radius {
+    border-radius: 4px;
+  }
 
-.b-medium {
-  border-width: medium;
-}
+  .b-thin {
+    border-width: thin;
+  }
 
-.b-solid {
-  border-style: solid;
-}
+  .b-medium {
+    border-width: medium;
+  }
 
-.b-none {
-  border-style: none;
+  .b-solid {
+    border-style: solid;
+  }
+
+  .b-none {
+    border-style: none;
+  }
+
+  .bt-solid {
+    border-top-style: solid;
+  }
+
+  .br-solid {
+    border-right-style: solid;
+  }
+
+  .bl-solid {
+    border-left-style: solid;
+  }
 }

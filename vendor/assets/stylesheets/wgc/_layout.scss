@@ -1,0 +1,18 @@
+@if ($enable-wgc-wrapper == true) {
+
+  .l-fl {
+    float: left;
+  }
+
+  .l-fr {
+    float: right;
+  }
+
+  .l-inline-block {
+    display: inline-block;
+  }
+
+  .l-block {
+    display: block;
+  }
+}

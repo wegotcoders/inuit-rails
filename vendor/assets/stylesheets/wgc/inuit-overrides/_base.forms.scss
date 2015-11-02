@@ -7,7 +7,7 @@
  *
  */
 fieldset{
-    padding:$inuit-base-spacing-unit;
+    padding: $inuit-base-spacing-unit;
 }
 
 
@@ -53,7 +53,7 @@ textarea{
     margin:0;
 }
     .form-fields > li{
-        // @extend %sass-margin-bottom;
+        @extend %sass-margin-bottom;
     }
     .form-fields > li:last-child{
         margin-bottom:0;

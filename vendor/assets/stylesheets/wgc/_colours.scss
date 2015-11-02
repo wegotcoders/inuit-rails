@@ -1,0 +1,30 @@
+@if ($enable-wgc-wrapper == true) {
+
+  $pallete: (
+    white:           #fff,
+    whitesmoke:      #f0f0f0,
+    light-grey:      #adadad,
+    pale-blue:       #f5ffff,
+    skeleton-blue:   #1eaedb,
+    skeleton-text:   #222,
+    black:           #000
+  );
+
+  @each $name, $colour in $pallete {
+    .c-#{ $name } {
+      color: $colour;
+    };
+
+    .bg-#{ $name } {
+      background-color: $colour;
+    };
+
+    .b-#{ $name } {
+      border-color: $colour;
+    };
+  };
+
+  .bg-transparent {
+    background-color: transparent;
+  }
+}

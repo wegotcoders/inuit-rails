@@ -1,0 +1,46 @@
+@if ($enable-wgc-wrapper == true) {
+
+  $inuit-layout-sizes: (
+    $inuit-enable-layout--flush    "--flush"    0,
+    $inuit-enable-layout--tiny     "--tiny"     quarter($inuit-base-spacing-unit),
+    $inuit-enable-layout--small    "--small"    halve($inuit-base-spacing-unit),
+    $inuit-enable-layout--medium   ""           $inuit-base-spacing-unit,
+    $inuit-enable-layout--large    "--large"    double($inuit-base-spacing-unit),
+    $inuit-enable-layout--huge     "--huge"     quadruple($inuit-base-spacing-unit)
+  ) !default;
+
+  @each $wgc-breakpoint in $wgc-breakpoints {
+    $alias: nth($wgc-breakpoint, 1);
+
+    @include wgc-media-query($alias) {
+      .#{$inuit-layout-namespace}#{$alias}layout,
+      %#{$inuit-layout-namespace}#{$alias}layout {
+        margin-left: 0;
+      }
+
+      .#{$inuit-layout-namespace}#{$alias}layout__item,
+      %#{$inuit-layout-namespace}#{$alias}layout__item {
+        padding-left: 0;
+      }
+
+      @each $inuit-layout-size in $inuit-layout-sizes {
+        $enabler: nth($inuit-layout-size, 1);
+
+        @if ($enabler == true) {
+
+          $modifier:       nth($inuit-layout-size, 2);
+          $modifier-value: nth($inuit-layout-size, 3);
+
+          @include layout-with-gutter($modifier, $modifier-value, $alias)
+        }
+      }
+
+      @if ($inuit-enable-layout--center == true) {
+        .#{$inuit-layout-namespace}#{$alias}layout--center,
+        %#{$inuit-layout-namespace}#{$alias}layout--center {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

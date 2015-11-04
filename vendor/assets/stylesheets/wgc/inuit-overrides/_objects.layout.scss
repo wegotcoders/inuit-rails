@@ -13,16 +13,6 @@
     $alias: nth($wgc-breakpoint, 1);
 
     @include wgc-media-query($alias) {
-      .#{$inuit-layout-namespace}#{$alias}layout,
-      %#{$inuit-layout-namespace}#{$alias}layout {
-        margin-left: 0;
-      }
-
-      .#{$inuit-layout-namespace}#{$alias}layout__item,
-      %#{$inuit-layout-namespace}#{$alias}layout__item {
-        padding-left: 0;
-      }
-
       @each $inuit-layout-size in $inuit-layout-sizes {
         $enabler: nth($inuit-layout-size, 1);
 

@@ -47,9 +47,6 @@
     > %#{$inuit-layout-namespace}#{$wgc-breakpoint}layout__item--center {
       padding-left: $modifier-value / 2;
       padding-right: $modifier-value / 2;
-    }
-
-    > .t-central {
       text-align: center;
     }
   }

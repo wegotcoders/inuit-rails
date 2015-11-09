@@ -1,18 +1,35 @@
-@if ($enable-wgc-wrapper == true) {
+.l-fl {
+  float: left;
+}
 
-  .l-fl {
-    float: left;
-  }
+.l-fr {
+  float: right;
+}
 
-  .l-fr {
-    float: right;
-  }
+.l-cb {
+  clear: both;
+}
 
-  .l-inline-block {
-    display: inline-block;
-  }
+.l-cr {
+  clear: right;
+}
 
-  .l-block {
-    display: block;
-  }
+.l-cl {
+  clear: left;
+}
+
+.l-inline-block {
+  display: inline-block;
+}
+
+.l-block {
+  display: block;
+}
+
+.l-o-hidden {
+  overflow: hidden;
+}
+
+.l-centered {
+  margin: 0 auto;
 }

@@ -1,50 +1,55 @@
-@if ($enable-wgc-wrapper == true) {
+.b-radius {
+  border-radius: $wgc-border-radius;
+}
 
-  .b-radius {
-    border-radius: 4px;
-  }
+.b-radius--tr {
+  border-top-right-radius: $wgc-border-radius;
+}
 
-  .btr-radius {
-    border-top-right-radius: 4px;
-  }
+.b-radius--br {
+  border-bottom-right-radius: $wgc-border-radius;
+}
 
-  .bbr-radius {
-    border-bottom-right-radius: 4px;
-  }
+.b-radius--tl {
+  border-top-left-radius: $wgc-border-radius;
+}
 
-  .btl-radius {
-    border-top-left-radius: 4px;
-  }
+.b-radius--bl {
+  border-bottom-left-radius: $wgc-border-radius;
+}
 
-  .bbl-radius {
-    border-bottom-left-radius: 4px;
-  }
+.b--thin {
+  border-width: thin;
+}
 
-  .b-thin {
-    border-width: thin;
-  }
+.b--medium {
+  border-width: medium;
+}
 
-  .b-medium {
-    border-width: medium;
-  }
+.b--thick {
+  border-width: thick;
+}
 
-  .b-solid {
-    border-style: solid;
-  }
+.b-none {
+  border-style: none;
+}
 
-  .b-none {
-    border-style: none;
-  }
+.b--solid {
+  border-style: solid;
+}
 
-  .bt-solid {
-    border-top-style: solid;
-  }
+.bt--solid {
+  border-top-style: solid;
+}
 
-  .br-solid {
-    border-right-style: solid;
-  }
+.br--solid {
+  border-right-style: solid;
+}
 
-  .bl-solid {
-    border-left-style: solid;
-  }
+.bl--solid {
+  border-left-style: solid;
+}
+
+.bb--solid {
+  border-bottom-style: solid;
 }

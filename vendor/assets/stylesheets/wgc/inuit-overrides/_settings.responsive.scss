@@ -1,0 +1,32 @@
+$wgc-breakpoints: (
+    ""               "screen and (min-width: 0em)",
+    "palm-"          "screen and (max-width: 44.9375em)",
+    "lap-"           "screen and (min-width: 45em) and (max-width: 63.9375em)",
+    "lap-and-up-"    "screen and (min-width: 45em)",
+    "portable-"      "screen and (max-width: 63.9375em)",
+    "desk-"          "screen and (min-width: 64em)",
+    "retina-"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+) !default;
+
+$wgc-widths-columns-responsive: (
+  1     'one'         'whole'          'wholes',
+  2     'two'         'half'           'halves',
+  3     'three'       'third'          'thirds',
+  4     'four'        'quarter'        'quarters',
+  5     'five'        'fifth'          'fifths',
+  6     'six'         'sixth'          'sixths',
+  7     'seven'       'seventh'        'sevenths',
+  8     'eight'       'eighth'         'eighths',
+  9     'nine'        'ninth'          'ninths',
+  10    'ten'         'tenth'          'tenths',
+  11    'eleven'      'eleventh'       'elevenths',
+  12    'twelve'      'twelfth'        'twelfths',
+  13    'thirteen'    'thirteenth'     'thirteenths',
+  14    'fourteen'    'fourteenth'     'fourteenths',
+  15    'fifteen'     'fifteenth'      'fifteenths',
+  16    'sixteen'     'sixteenth'      'sixteenths',
+  17    'seventeen'   'seventeenth'    'seventeenths',
+  18    'eighteen'    'eighteenth'     'eighteenths',
+  19    'nineteen'    'nineteenth'     'nineteenths',
+  20    'twenty'      'twentieth'      'twentieths'
+) !default;

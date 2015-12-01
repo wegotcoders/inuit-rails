@@ -1,0 +1,55 @@
+.b-radius {
+  border-radius: $wgc-border-radius;
+}
+
+.b-radius--tr {
+  border-top-right-radius: $wgc-border-radius;
+}
+
+.b-radius--br {
+  border-bottom-right-radius: $wgc-border-radius;
+}
+
+.b-radius--tl {
+  border-top-left-radius: $wgc-border-radius;
+}
+
+.b-radius--bl {
+  border-bottom-left-radius: $wgc-border-radius;
+}
+
+.b--thin {
+  border-width: thin;
+}
+
+.b--medium {
+  border-width: medium;
+}
+
+.b--thick {
+  border-width: thick;
+}
+
+.b-none {
+  border-style: none;
+}
+
+.b--solid {
+  border-style: solid;
+}
+
+.bt--solid {
+  border-top-style: solid;
+}
+
+.br--solid {
+  border-right-style: solid;
+}
+
+.bl--solid {
+  border-left-style: solid;
+}
+
+.bb--solid {
+  border-bottom-style: solid;
+}

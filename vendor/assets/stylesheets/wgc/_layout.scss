@@ -1,35 +1,40 @@
-.l-fl {
+// Float
+.l-float--left {
   float: left;
 }
 
-.l-fr {
+.l-float--right {
   float: right;
 }
 
-.l-cb {
-  clear: both;
-}
-
-.l-cr {
-  clear: right;
-}
-
-.l-cl {
+// Clear
+.l-clear--left {
   clear: left;
 }
 
-.l-inline-block {
+.l-clear--right {
+  clear: right;
+}
+
+.l-clear--both {
+  clear: both;
+}
+
+// Display
+.l-display--inline-block {
   display: inline-block;
 }
 
-.l-block {
+.l-display--block {
   display: block;
 }
 
-.l-o-hidden {
+// Overflow
+.l-overflow--hidden {
   overflow: hidden;
 }
 
-.l-centered {
+//
+.l--centered {
   margin: 0 auto;
 }

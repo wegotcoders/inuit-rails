@@ -9,19 +9,19 @@ $pallete: (
 );
 
 @each $name, $colour in $pallete {
-  .c-#{ $name } {
+  .wgc__text-color--#{ $name } {
     color: $colour;
   };
 
-  .bg-#{ $name } {
+  .wgc__background-color--#{ $name } {
     background-color: $colour;
   };
 
-  .b-#{ $name } {
+  .wgc__border-color--#{ $name } {
     border-color: $colour;
   };
 };
 
-.bg-transparent {
+.wgc__background-transparent {
   background-color: transparent;
 }

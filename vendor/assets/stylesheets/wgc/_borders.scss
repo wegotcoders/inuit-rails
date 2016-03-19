@@ -1,55 +1,55 @@
-.b-radius {
+.wgc__border-radius {
   border-radius: $wgc-border-radius;
 }
 
-.b-radius--tr {
+.wgc__border-radius--top-right {
   border-top-right-radius: $wgc-border-radius;
 }
 
-.b-radius--br {
+.wgc__border-radius--bottom-right {
   border-bottom-right-radius: $wgc-border-radius;
 }
 
-.b-radius--tl {
+.wgc__border-radius--top-left {
   border-top-left-radius: $wgc-border-radius;
 }
 
-.b-radius--bl {
+.wgc__border-radius--bottom-left {
   border-bottom-left-radius: $wgc-border-radius;
 }
 
-.b--thin {
+.wgc__border--thin {
   border-width: thin;
 }
 
-.b--medium {
+.wgc__border--medium {
   border-width: medium;
 }
 
-.b--thick {
+.wgc__border--thick {
   border-width: thick;
 }
 
-.b--none {
+.wgc__border--none {
   border-style: none;
 }
 
-.b--solid {
+.wgc__border--solid {
   border-style: solid;
 }
 
-.bt--solid {
+.wgc__border-top--solid {
   border-top-style: solid;
 }
 
-.br--solid {
+.wgc__border-right--solid {
   border-right-style: solid;
 }
 
-.bl--solid {
+.wgc__border-left--solid {
   border-left-style: solid;
 }
 
-.bb--solid {
+.wgc__border-bottom--solid {
   border-bottom-style: solid;
 }

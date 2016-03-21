@@ -1,49 +1,32 @@
 inuit-rails
 ===========
 
-An attempt to get inuit css framework to play nicely with rails.
-
-It is strategy #2 in this useful blog post: http://www.codefellows.org/blog/five-ways-to-manage-front-end-assets-in-rails
-
-Of all the options, I wanted to have a way of keeping control over how and when I update the framework, whilst keeping bower out of my main rails app. This is the compromise that I came up with.
+Compiling inuitcss with Rails Sprockets + some extra great stuff!
 
 Using inuit-rails
------------------
+------------------
 
-This repo combines all of the repos on the inuit github page https://github.com/inuitcss. A few particular files selected from the older -- csswizardry url -- which are not yet covered in the -- inuit css version -- are to be found in `lib/vendor/assets/stylesheets/wgc/csswizardy`.
+For an example of this framework being used in anger take a look at our
+[demo page](https://wegotcoders-inuit-rails-demo.herokuapp.com/).
 
-`lib/vendor/assets/stylesheets/wgc/modified_inuit_behaviour`
+The corresponding set-up is located in `examples/main.scss`
 
-`lib/vendor/assets/stylesheets/wgc/additional_behaviour`
-
-You can opt to bring in whichever modules you want, the philosophy behind this is that you import the least css necessary for the job.
-
-On the Rails side therefore, create a sass/scss file somewhere in your app/assets/stylesheets folder, which does the importing of just the modules you need. But sure that you import the modules in the correct order -- insert correct order here --. For example
-
-Rules of thumb
+Configuration
 --------------
 
-## TODOS:
-## guarantee code
-## artists please improve the pallette
-## <!-- --> or > hack!
-## $wgc-layout-namespace
-## $wgc-widths-namespace
-## $inuit-global-border-box
-## open source the demo page carousel
-## example config with manifest file
-## 'goes-like' rules: including colours
-## american spelling conventions for universality
-## facility to generate extra breakpoints from manifest file :) -- and append to lists generally
-## for an example of this being used in anger head over to  demo page
-## #{property}--#{value}
-## responsive colors
-## configuring size of border-radii
-## responsive wgc add ons
+The 'vanilla inuit' modules within `vendor/app/stylesheets/inuit/` must be imported in the following order
 
-Take advantage of the box-sizing property
+1. Settings
+2. Tools
+3. Generic
+4. Base
+5. Objects
+6. Components
+7. Trumps
 
-```
+E.G.
+
+```scss
   @import "inuit-defaults/settings.defaults";
 
   @import "inuit-functions/tools.functions";
@@ -57,6 +40,25 @@ Take advantage of the box-sizing property
 
   // Objects would go next...
 ```
+
+About
+-----
+
+This gem combines all of the repos on the new inuitcss github page
+[https://github.com/inuitcss].
+
+A few of the files here have been included from the older inuitcss repo at
+[https://github.com/csswizardry/inuit.css/] since they are not yet covered by the
+newest version. These are located in `/wgc/csswizardy`.
+
+Some custom inuit-esque files are located in `wgc/modified_inuit_behaviour`.
+The syntax here has been adapted for improved 'guessability'. In addition each
+class has been coupled to all of the breakpoints.
+
+Some extra helper files, including a color palette, are located in
+`wgc/additional_behaviour`. These can be useful
+for customising elements beyond the basic macros of the inuitcss
+classes.
 
 Contributing to inuit-rails
 ---------------------------

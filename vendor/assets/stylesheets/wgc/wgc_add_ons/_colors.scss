@@ -1,4 +1,4 @@
-$pallete: (
+$palette: (
   aqua:            #0B57A4,
   baby-blue:       #B8D0E8,
   black:           #000000,
@@ -39,7 +39,7 @@ $pallete: (
   yellow-orange:   #FEC42E
 );
 
-@each $name, $colour in $pallete {
+@each $name, $colour in $palette {
   .#{$wgc-namespace}__text-color--#{$name} {
     color: $colour;
   };

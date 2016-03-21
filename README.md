@@ -10,9 +10,38 @@ Of all the options, I wanted to have a way of keeping control over how and when 
 Using inuit-rails
 -----------------
 
-I've tried to bring in pretty much all of the components on the inuit github page https://github.com/inuitcss; but the whole point of it is that you only bring in the parts that you need.
+This repo combines all of the repos on the inuit github page https://github.com/inuitcss. A few particular files selected from the older -- csswizardry url -- which are not yet covered in the -- inuit css version -- are to be found in `lib/vendor/assets/stylesheets/wgc/csswizardy`.
 
-Therefore on the Rails side, create a sass/scss file somewhere in your app/assets/stylesheets folder, which does the importing of just the modules you need. E.g.
+`lib/vendor/assets/stylesheets/wgc/modified_inuit_behaviour`
+
+`lib/vendor/assets/stylesheets/wgc/additional_behaviour`
+
+You can opt to bring in whichever modules you want, the philosophy behind this is that you import the least css necessary for the job.
+
+On the Rails side therefore, create a sass/scss file somewhere in your app/assets/stylesheets folder, which does the importing of just the modules you need. But sure that you import the modules in the correct order -- insert correct order here --. For example
+
+Rules of thumb
+--------------
+
+## TODOS:
+## guarantee code
+## artists please improve the pallette
+## <!-- --> or > hack!
+## $wgc-layout-namespace
+## $wgc-widths-namespace
+## $inuit-global-border-box
+## open source the demo page carousel
+## example config with manifest file
+## 'goes-like' rules: including colours
+## american spelling conventions for universality
+## facility to generate extra breakpoints from manifest file :) -- and append to lists generally
+## for an example of this being used in anger head over to  demo page
+## #{property}--#{value}
+## responsive colors
+## configuring size of border-radii
+## responsive wgc add ons
+
+Take advantage of the box-sizing property
 
 ```
   @import "inuit-defaults/settings.defaults";
@@ -29,13 +58,6 @@ Therefore on the Rails side, create a sass/scss file somewhere in your app/asset
   // Objects would go next...
 ```
 
-I couldn't really get this to play nicely with the extensive use of variables, unless I import the stylesheets from the main app. To set a button colour for instance, you can add a variable before the part of the framework that you are importing, e.g.
-
-```
-  $inuit-btn-background: #09992a;
-  @import "inuit-buttons/objects.buttons";
-```
-
 Contributing to inuit-rails
 ---------------------------
 
@@ -44,5 +66,4 @@ Contributing to inuit-rails
 * Fork the project.
 * Start a feature/bugfix branch.
 * Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.

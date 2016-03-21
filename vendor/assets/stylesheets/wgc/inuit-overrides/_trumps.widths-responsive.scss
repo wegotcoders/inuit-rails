@@ -1,9 +1,0 @@
-@each $wgc-breakpoint in $wgc-breakpoints {
-  $alias: nth($wgc-breakpoint, 1);
-
-  @include wgc-media-query($alias) {
-    @each $inuit-widths-column in $wgc-widths-columns-responsive {
-      @include wgc-widths(nth($inuit-widths-column, 1), $alias);
-    }
-  }
-}

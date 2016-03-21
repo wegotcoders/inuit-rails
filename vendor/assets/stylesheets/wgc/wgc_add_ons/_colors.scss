@@ -1,0 +1,58 @@
+$pallete: (
+  aqua:            #0B57A4,
+  baby-blue:       #B8D0E8,
+  black:           #000000,
+  blue:            #2A82D7,
+  blue-green:      #148AA5,
+  blue-violet:     #3714A4,
+  brown:           #964B00,
+  crimson:         #A50516,
+  deep-pink:       #FB3C8F,
+  fuschia:         #A51497,
+  gray:            #686868,
+  green:           #3AA03A,
+  hot-pink:        #FF0080,
+  lemon:           #FEE233,
+  light-blue:      #8BBDEB,
+  light-red:       #FC6A6C,
+  lime:            #C1FD33,
+  lime-green:      #2BFD2F,
+  magenta:         #FC1CAD,
+  midnight-blue:   #000066,
+  olive:           #2B4726,
+  orange:          #FD7222,
+  orange-red:      #FC331C,
+  orange-yellow:   #FFCC00,
+  peach:           #FFE5B4,
+  pink:            #FC5AB8,
+  purple:          #AF31F2,
+  red:             #FC0D1B,
+  red-orange:      #D7462C,
+  salmon:          #F69E94,
+  tan:             #F2DDBF,
+  teal:            #2B8A6D,
+  violet:          #6B28CE,
+  violet-blue:     #6041FA,
+  white:           #FFFFFF,
+  yellow:          #FEEE35,
+  yellow-green:    #DEFD35,
+  yellow-orange:   #FEC42E
+);
+
+@each $name, $colour in $pallete {
+  .#{$wgc-namespace}__text-color--#{$name} {
+    color: $colour;
+  };
+
+  .#{$wgc-namespace}__background-color--#{$name} {
+    background-color: $colour;
+  };
+
+  .#{$wgc-namespace}__border-color--#{$name} {
+    border-color: $colour;
+  };
+};
+
+.#{$wgc-namespace}__background-transparent {
+  background-color: transparent;
+}

@@ -1,10 +1,16 @@
-title: The We Got Coders inuit-rails Manual
-email: hello@wegotcoders.com
-description: >
-  A walk through guide for getting started with the basic features of the
-  wegotcoders inuit-rails gem
-twitter_username: wegotcoders
-github_username:  wegotcoders
+title: The inuit-rails Manual
 
-# Build settings
 markdown: kramdown
+
+collections:
+  lessons:
+    output: true
+    permalink: /lessons/:slug
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "lessons"
+    values:
+      layout: lesson

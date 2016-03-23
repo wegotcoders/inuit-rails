@@ -1,23 +1,15 @@
 ---
 layout: default
 ---
+<h2 class="wgc__margin-left--one-bsu wgc__margin-top--one-half-bsu">Lessons:</h2>
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
+<ol class="wgc__margin-left--four-bsu">
+  {% for lesson in site.lessons %}
+    <h3>
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        <a class="wgc__text-decoration--none wgc__text-color--black site_specific__hover-link" href="{{site.base_url}}/lessons/{{ lesson.slug }}">{{ lesson.title }}</a>
       </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+      <p>{{site.base_url}}</p>
+    </h3>
+  {% endfor %}
+</ul>

@@ -1,0 +1,13 @@
+.wgc__logo {
+  background-image: url('../../images/WEGOTCODERS_color.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 45px;
+}
+
+.site_specific__hover-link {
+  &:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+}

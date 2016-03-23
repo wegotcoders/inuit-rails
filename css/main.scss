@@ -49,6 +49,10 @@ $on-laptop:        800px;
   'jekyll_defaults/syntax-highlighting'
 ;
 
+// site specific
+
+@import 'site_specific/site_specific.scss';
+
 // inuitcss
 
 /* Set variables */
@@ -91,7 +95,7 @@ $wgc-enable-negative-margins--four-bsu:        true;
   'inuitcss/tools.functions',
   'inuitcss/generic.normalize',
   'inuitcss/generic.box-sizing',
-  'inuitcss/objects.list-inline',
+  'inuitcss/base.headings',
   'inuitcss/objects.buttons',
   'inuitcss/trumps.clearfix',
 
@@ -109,6 +113,7 @@ $wgc-enable-negative-margins--four-bsu:        true;
   'wgc/wgc_add_ons/layout_helpers',
   'wgc/wgc_add_ons/borders',
   'wgc/wgc_add_ons/colors',
-  'wgc/wgc_add_ons/typography'
+  'wgc/wgc_add_ons/typography',
+  'wgc/wgc_add_ons/lists'
 ;
 

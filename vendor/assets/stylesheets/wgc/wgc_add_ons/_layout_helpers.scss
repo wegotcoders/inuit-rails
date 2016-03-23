@@ -52,6 +52,10 @@
   vertical-align: top;
 }
 
+.#{$wgc-namespace}__vertical-align--middle {
+  vertical-align: middle;
+}
+
 .#{$wgc-namespace}__vertical-align--bottom {
   vertical-align: bottom;
 }

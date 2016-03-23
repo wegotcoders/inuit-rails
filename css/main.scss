@@ -88,6 +88,10 @@ $wgc-enable-negative-margins--one-bsu:         true;
 $wgc-enable-negative-margins--two-bsu:         true;
 $wgc-enable-negative-margins--four-bsu:        true;
 
+$wgc-breakpoints: (
+  ""               "screen and (min-width: 0em)",
+);
+
 /* Import desired files */
 @import
   'inuitcss/settings.defaults',

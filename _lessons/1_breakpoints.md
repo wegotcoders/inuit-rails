@@ -51,4 +51,3 @@ These breakpoints are iterated over by the `wgc-media-query` mixin in `_breakpoi
 **WARNING:**
 
 **As you can see, unused breakpoints will result in tons of redundant css whenver this mixin is invoked.**
-

@@ -1,0 +1,57 @@
+// Box Sizing
+.#{$wgc-namespace}__box-sizing--border-box {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+// Float
+.#{$wgc-namespace}__float--left {
+  float: left;
+}
+
+.#{$wgc-namespace}__float--right {
+  float: right;
+}
+
+// Clear
+.#{$wgc-namespace}__clear--left {
+  clear: left;
+}
+
+.#{$wgc-namespace}__clear--right {
+  clear: right;
+}
+
+.#{$wgc-namespace}__clear--both {
+  clear: both;
+}
+
+// Display
+.#{$wgc-namespace}__display--inline-block {
+  display: inline-block;
+}
+
+.#{$wgc-namespace}__display--block {
+  display: block;
+}
+
+// Overflow
+.#{$wgc-namespace}__overflow--hidden {
+  overflow: hidden;
+}
+
+// Auto margin
+.#{$wgc-namespace}__margin--auto {
+  margin: auto;
+}
+
+// Vertical align
+
+.#{$wgc-namespace}__vertical-align--top {
+  vertical-align: top;
+}
+
+.#{$wgc-namespace}__vertical-align--bottom {
+  vertical-align: bottom;
+}

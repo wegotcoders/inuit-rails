@@ -1,0 +1,33 @@
+$wgc-bsu:                                      24px  !default; // Base Spacing Unit
+$wgc-base-text-color:                          #333  !default;
+$wgc-base-background-color:                    #fff  !default;
+$wgc-namespace:                                "wgc" !default;
+
+$wgc-border-radius:                            3px   !default;
+
+$wgc-enable-layout--flush:                     false !default;
+$wgc-enable-layout--gutter-one-quarter-bsu:    false !default;
+$wgc-enable-layout--gutter-one-half-bsu:       false !default;
+$wgc-enable-layout--gutter-one-bsu:            false !default;
+$wgc-enable-layout--gutter-two-bsu:            false !default;
+$wgc-enable-layout--gutter-four-bsu:           false !default;
+$wgc-enable-layout--center:                    false !default;
+
+$wgc-enable-paddings--one-quarter-bsu:         false !default;
+$wgc-enable-paddings--one-half-bsu:            false !default;
+$wgc-enable-paddings--one-bsu:                 false !default;
+$wgc-enable-paddings--two-bsu:                 false !default;
+$wgc-enable-paddings--four-bsu:                false !default;
+$wgc-enable-paddings--none:                    false !default;
+
+$wgc-enable-margins--one-quarter-bsu:          false !default;
+$wgc-enable-margins--one-half-bsu:             false !default;
+$wgc-enable-margins--one-bsu:                  false !default;
+$wgc-enable-margins--two-bsu:                  false !default;
+$wgc-enable-margins--four-bsu:                 false !default;
+$wgc-enable-margins--none:                     false !default;
+$wgc-enable-negative-margins--one-quarter-bsu: false !default;
+$wgc-enable-negative-margins--one-half-bsu:    false !default;
+$wgc-enable-negative-margins--one-bsu:         false !default;
+$wgc-enable-negative-margins--two-bsu:         false !default;
+$wgc-enable-negative-margins--four-bsu:        false !default;

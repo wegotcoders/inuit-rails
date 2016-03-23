@@ -234,3 +234,69 @@
         }
     }
 }
+
+/* inuitcss */
+
+/* Set variables */
+$inuit-enable-btn--small:                      true;
+$inuit-enable-btn--large:                      true;
+$inuit-enable-btn--full:                       true;
+$inuit-enable-btn--pill:                       true;
+
+$wgc-global-border-box:                        true;
+
+$wgc-enable-layout--flush:                     true;
+$wgc-enable-layout--gutter-one-quarter-bsu:    true;
+$wgc-enable-layout--gutter-one-half-bsu:       true;
+$wgc-enable-layout--gutter-one-bsu:            true;
+$wgc-enable-layout--gutter-two-bsu:            true;
+$wgc-enable-layout--gutter-four-bsu:           true;
+$wgc-enable-layout--center:                    true;
+
+$wgc-enable-paddings--one-quarter-bsu:         true;
+$wgc-enable-paddings--one-half-bsu:            true;
+$wgc-enable-paddings--one-bsu:                 true;
+$wgc-enable-paddings--two-bsu:                 true;
+$wgc-enable-paddings--four-bsu:                true;
+$wgc-enable-paddings--none:                    true;
+
+$wgc-enable-margins--one-quarter-bsu:          true;
+$wgc-enable-margins--one-half-bsu:             true;
+$wgc-enable-margins--one-bsu:                  true;
+$wgc-enable-margins--two-bsu:                  true;
+$wgc-enable-margins--four-bsu:                 true;
+$wgc-enable-margins--none:                     true;
+$wgc-enable-negative-margins--one-quarter-bsu: true;
+$wgc-enable-negative-margins--one-half-bsu:    true;
+$wgc-enable-negative-margins--one-bsu:         true;
+$wgc-enable-negative-margins--two-bsu:         true;
+$wgc-enable-negative-margins--four-bsu:        true;
+
+/* Import desired files */
+@import
+  'inuit/inuit-defaults/settings.defaults',
+  'inuit/inuit-mixins/tools.mixins',
+  'inuit/inuit-functions/tools.functions',
+  'inuit/inuit-normalize/generic.normalize',
+  'inuit/inuit-box-sizing/generic.box-sizing',
+  'inuit/inuit-list-inline/objects.list-inline',
+  'inuit/inuit-buttons/objects.buttons',
+  'inuit/inuit-clearfix/trumps.clearfix',
+
+  'wgc/wgc_config',
+
+  'wgc/css_wizardy/generic.shared',
+  'wgc/css_wizardy/base.forms',
+  'wgc/css_wizardy/objects.flyout',
+
+  'wgc/modified_inuit_css/breakpoints',
+  'wgc/modified_inuit_css/layout_groups',
+  'wgc/modified_inuit_css/columns',
+  'wgc/modified_inuit_css/box_model',
+
+  'wgc/wgc_add_ons/layout_helpers',
+  'wgc/wgc_add_ons/borders',
+  'wgc/wgc_add_ons/colors',
+  'wgc/wgc_add_ons/typography'
+;
+

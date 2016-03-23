@@ -1,0 +1,74 @@
+$wgc-columns: (
+  1     'one'         'whole'          'wholes',
+  2     'two'         'half'           'halves',
+  3     'three'       'third'          'thirds',
+  4     'four'        'quarter'        'quarters',
+  5     'five'        'fifth'          'fifths',
+  6     'six'         'sixth'          'sixths',
+  7     'seven'       'seventh'        'sevenths',
+  8     'eight'       'eighth'         'eighths',
+  9     'nine'        'ninth'          'ninths',
+  10    'ten'         'tenth'          'tenths',
+  11    'eleven'      'eleventh'       'elevenths',
+  12    'twelve'      'twelfth'        'twelfths',
+  13    'thirteen'    'thirteenth'     'thirteenths',
+  14    'fourteen'    'fourteenth'     'fourteenths',
+  15    'fifteen'     'fifteenth'      'fifteenths',
+  16    'sixteen'     'sixteenth'      'sixteenths',
+  17    'seventeen'   'seventeenth'    'seventeenths',
+  18    'eighteen'    'eighteenth'     'eighteenths',
+  19    'nineteen'    'nineteenth'     'nineteenths',
+  20    'twenty'      'twentieth'      'twentieths'
+) !default;
+
+@function numerator-to-word($index, $numerator) {
+  @each $row in $index {
+    @if (nth($row, 1) == $numerator) {
+      @return nth($row, 2);
+    }
+  }
+}
+
+@function denominator-to-word($index, $numerator, $denominator) {
+  @each $row in $index {
+    @if nth($row, 1) == $denominator {
+      @if ($numerator == 1) {
+        @return nth($row, 3);
+
+      } @else {
+
+        @return nth($row, 4);
+      }
+    }
+  }
+}
+
+@mixin wgc-widths($wgc-widths-denominator, $wgc-breakpoint: null) {
+  @if ($wgc-widths-denominator == 1) {
+    .#{$wgc-namespace}__#{$wgc-breakpoint}column-width--one-whole {
+      width: 100%;
+    }
+
+  } @else {
+
+    @for $wgc-widths-numerator from 1 to $wgc-widths-denominator {
+      .#{$wgc-namespace}__#{$wgc-breakpoint}column-width--#{numerator-to-word($wgc-columns, $wgc-widths-numerator)}-#{denominator-to-word($wgc-columns, $wgc-widths-numerator, $wgc-widths-denominator)} {
+        width: ($wgc-widths-numerator / $wgc-widths-denominator) * 100% !important;
+      }
+
+      .#{$wgc-namespace}__#{$wgc-breakpoint}column-offset--#{numerator-to-word($wgc-columns, $wgc-widths-numerator)}-#{denominator-to-word($wgc-columns, $wgc-widths-numerator, $wgc-widths-denominator)} {
+        margin-left: ($wgc-widths-numerator / $wgc-widths-denominator) * 100% !important;
+      }
+    }
+  }
+}
+
+@each $wgc-breakpoint in $wgc-breakpoints {
+  $alias: nth($wgc-breakpoint, 1);
+
+  @include wgc-media-query($alias) {
+    @each $wgc-widths-column in $wgc-columns {
+      @include wgc-widths(nth($wgc-widths-column, 1), $alias);
+    }
+  }
+}

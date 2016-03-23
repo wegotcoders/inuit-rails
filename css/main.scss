@@ -42,13 +42,11 @@ $on-laptop:        800px;
   }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-  'jekyll/defaults/base',
-  'jekyll/defaults/layout',
-  'jekyll/defaults/syntax-highlighting'
+  'jekyll_defaults/base',
+  'jekyll_defaults/layout',
+  'jekyll_defaults/syntax-highlighting'
 ;
 
 // inuitcss

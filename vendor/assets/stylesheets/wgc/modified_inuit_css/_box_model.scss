@@ -4,7 +4,7 @@
 		$wgc-generate-spacing-alias:      nth($wgc-breakpoint, 1) !global;
 		$wgc-generate-spacing-condition:  nth($wgc-breakpoint, 2);
 
-		@if ($wgc-generate-spacing-alias != "retina") {
+		@if ($wgc-generate-spacing-alias != "retina-") {
 			@include wgc-media-query($wgc-generate-spacing-alias) {
 				@content;
 			}

@@ -90,6 +90,7 @@ $wgc-enable-negative-margins--four-bsu:        true;
 
 $wgc-breakpoints: (
   ""               "screen and (min-width: 0em)",
+  "lap-and-up-"    "screen and (min-width: 45em)",
 );
 
 /* Import desired files */

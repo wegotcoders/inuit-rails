@@ -3,8 +3,20 @@
   {% include head.html %}
   <body>
     {% include header.html %}
-    <main>
-      <article class="wgc__column-offset--one-fifth wgc__column-width--three-fifths wgc__margin-top--two-bsu">
+    <main class="wgc__layout-group--gutter-two-bsu">
+      <nav class="wgc__column-width--one-fifth wgc__layout__item wgc__margin-top--two-bsu wgc__vertical-align--top">
+        <ul class="wgc__list-style--none">
+          {% for lesson in site.lessons %}
+            <h3>
+              <li>
+                <a class="wgc__text-decoration--none wgc__text-color--black site_specific__hover-link" href="{{site.base_url}}/lessons/{{ lesson.slug }}">{{ lesson.title }}</a>
+              </li>
+            </h3>
+          {% endfor %}
+        </sul>
+      </nav>
+
+      <article class="wgc__column-width--three-fifths wgc__margin-top--two-bsu wgc__layout__item">
         {{ content }}
       </article>
     </main>

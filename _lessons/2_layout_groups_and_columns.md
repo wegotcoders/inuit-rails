@@ -52,13 +52,13 @@ The default guttering options are:
 E.G.
 
 ```html
-  <div class="wgc__lap-and-up-layout-group--one-bsu"></div>
+  <div class="wgc__lap-and-up-layout-group--gutter-one-bsu"></div>
 ```
 
 Then place your `wgc__layout__item`s inside of it:
 
 ```html
-  <div class="wgc__lap-and-up-layout-group--one-bsu">
+  <div class="wgc__lap-and-up-layout-group--gutter-one-bsu">
     <div class="wgc__layout__item"></div>
     <div class="wgc__layout__item"></div>
     <div class="wgc__layout__item"></div>
@@ -67,7 +67,7 @@ Then place your `wgc__layout__item`s inside of it:
 Let's make each `wgc__layout__item` fill one third of its parent:
 
 ```html
-  <div class="wgc__lap-and-up-layout-group--one-bsu">
+  <div class="wgc__lap-and-up-layout-group--gutter-one-bsu">
     <div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div>
     <div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div>
     <div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div>
@@ -77,7 +77,7 @@ Let's make each `wgc__layout__item` fill one third of its parent:
 But in order to preserve the column structure i.e. prevent the third child wrapping onto the next line, we need to strip the whitespace that is conferred to them as inline-blocks. This can be done using comment tags:
 
 ```html
-  <div class="wgc__lap-and-up-layout-group--one-bsu">
+  <div class="wgc__lap-and-up-layout-group--gutter-one-bsu">
     <div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div><!--
     --><div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div><!--
     --><div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div>

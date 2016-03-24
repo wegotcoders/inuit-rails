@@ -3,7 +3,9 @@ title: Breakpoints
 slug: breakpoints
 ---
 
-In your `main.scss` file, override `$wgc-breakpoints` as you wish. For example,
+In your `main.scss` file, override `$wgc-breakpoints` as you wish. Be careful to observe the `"#{breakpoint}-"` syntax.
+
+For example,
 
 ```scss
   $wgc-breakpoints: (

@@ -14,8 +14,8 @@ $wgc-layout-sizes: (
     margin: 0;
     padding: 0;
 
-    > .#{$wgc-namespace}__#{$wgc-breakpoint}layout__item,
-    > %#{$wgc-namespace}__#{$wgc-breakpoint}layout__item {
+    > .#{$wgc-namespace}__layout__item,
+    > %#{$wgc-namespace}__layout__item {
       display: inline-block;
       padding-left: 0;
       padding-right: $modifier-value;

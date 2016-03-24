@@ -3,7 +3,7 @@ title: Layout groups and columns
 slug: layout-groups-and-columns
 ---
 
-Layout is implemented with this scss mixin defined in `_layout_groups.scss`:
+Layout is implemented with this mixin defined in `_layout_groups.scss`:
 
 ```scss
   @mixin wgc-layout-group($modifier, $modifier-value, $wgc-breakpoint) {
@@ -82,6 +82,14 @@ But in order to preserve the column structure i.e. prevent the third child wrapp
     --><div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div><!--
     --><div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div>
   </div>
+```
+(or in haml by placing a `>` at the end of the line)
+
+```haml
+  .wgc__lap-and-up-layout-group--gutter-one-bsu
+    .wgc__layout__item.wgc__lap-and-up-column-width--one-third>
+    .wgc__layout__item.wgc__lap-and-up-column-width--one-third>
+    .wgc__layout__item.wgc__lap-and-up-column-width--one-third>
 ```
 
 And that's it!

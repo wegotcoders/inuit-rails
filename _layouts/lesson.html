@@ -9,7 +9,7 @@
           {% for lesson in site.lessons %}
             <h3>
               <li>
-                <a class="wgc__text-decoration--none wgc__text-color--black site_specific__hover-link" href="{{site.base_url}}/lessons/{{ lesson.slug }}">{{ lesson.title }}</a>
+                <a class="wgc__text-decoration--none wgc__text-color--black site_specific__hover-link" href="{{ site.base_url | site.github.base_url }}/lessons/{{ lesson.slug }}">{{ lesson.title }}</a>
               </li>
             </h3>
           {% endfor %}

@@ -2,6 +2,8 @@ title: The inuit-rails Manual
 
 markdown: kramdown
 
+baseurl: /inuit-rails
+
 collections:
   lessons:
     output: true

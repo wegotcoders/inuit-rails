@@ -5,7 +5,7 @@ slug: box-model
 
 Box model classes are generated like this in `_box_model.scss`:
 
-```scss
+{% highlight scss %}
   @mixin wgc-generate-spacing() {
     @each $wgc-breakpoint in $wgc-breakpoints {
 
@@ -33,7 +33,7 @@ Box model classes are generated like this in `_box_model.scss`:
       .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}margins-vertical--one-quarter-bsu           { margin-top:       quarter($wgc-bsu) !important;     margin-bottom: quarter($wgc-bsu) !important; }
     }
   }
-```
+{% endhighlight %}
 
 Therefore to use `wgc__lap-and-up-margins-all--one-quarter-bsu` in your markup just set
 

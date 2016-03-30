@@ -49,10 +49,6 @@ $on-laptop:        800px;
   'jekyll_defaults/syntax-highlighting'
 ;
 
-// site specific
-
-@import 'site_specific/site_specific.scss';
-
 // inuitcss
 
 /* Set variables */
@@ -122,3 +118,6 @@ $wgc-breakpoints: (
   'wgc/wgc_add_ons/lists'
 ;
 
+// site specific
+
+@import 'site_specific/site_specific.scss';

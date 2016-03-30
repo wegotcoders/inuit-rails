@@ -5,7 +5,7 @@ slug: layout-groups-and-columns
 
 Layout is implemented with this mixin defined in `_layout_groups.scss`:
 
-```scss
+{% highlight scss %}
   @mixin wgc-layout-group($modifier, $modifier-value, $wgc-breakpoint) {
     .#{$wgc-namespace}__#{$wgc-breakpoint}layout-group#{$modifier},
     %#{$wgc-namespace}__#{$wgc-breakpoint}layout-group#{$modifier} {
@@ -31,13 +31,13 @@ Layout is implemented with this mixin defined in `_layout_groups.scss`:
       }
     }
   }
-```
+{% endhighlight %}
 
 Create a `wgc__#{breakpoint}layout-group--#{gutter-modifier}` element.
 
 The default guttering options are:
 
-```scss
+{% highlight scss %}
   $wgc-layout-sizes: (
     $wgc-enable-layout--flush                     "--flush"                     0,
     $wgc-enable-layout--gutter-one-quarter-bsu    "--gutter-one-quarter-bsu"    quarter($wgc-bsu),
@@ -46,50 +46,53 @@ The default guttering options are:
     $wgc-enable-layout--gutter-two-bsu            "--gutter-two-bsu"            double($wgc-bsu),
     $wgc-enable-layout--gutter-four-bsu           "--gutter-four-bsu"           quadruple($wgc-bsu)
   ) !default;
-```
+{% endhighlight %}
+
 (But these can be overridden in your `main.scss` - and should be if there are unused options!)
 
 E.G.
 
-```html
+{% highlight html %}
   <div class="wgc__lap-and-up-layout-group--gutter-one-bsu"></div>
-```
+{% endhighlight %}
 
 Then place your `wgc__layout__item`s inside of it:
 
-```html
+{% highlight html %}
   <div class="wgc__lap-and-up-layout-group--gutter-one-bsu">
     <div class="wgc__layout__item"></div>
     <div class="wgc__layout__item"></div>
     <div class="wgc__layout__item"></div>
   </div>
-```
+{% endhighlight %}
+
 Let's make each `wgc__layout__item` fill one third of its parent:
 
-```html
+{% highlight html %}
   <div class="wgc__lap-and-up-layout-group--gutter-one-bsu">
     <div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div>
     <div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div>
     <div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div>
   </div>
-```
+{% endhighlight %}
 
 But in order to preserve the column structure i.e. prevent the third child wrapping onto the next line, we need to strip the whitespace that is conferred to them as inline-blocks. This can be done using comment tags:
 
-```html
+{% highlight html %}
   <div class="wgc__lap-and-up-layout-group--gutter-one-bsu">
     <div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div><!--
     --><div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div><!--
     --><div class="wgc__layout__item wgc__lap-and-up-column-width--one-third"></div>
   </div>
-```
+{% endhighlight %}
+
 (or in haml by placing a `>` at the end of the line)
 
-```haml
+{% highlight haml %}
   .wgc__lap-and-up-layout-group--gutter-one-bsu
     .wgc__layout__item.wgc__lap-and-up-column-width--one-third>
     .wgc__layout__item.wgc__lap-and-up-column-width--one-third>
     .wgc__layout__item.wgc__lap-and-up-column-width--one-third>
-```
+{% endhighlight %}
 
 And that's it!

@@ -1,0 +1,272 @@
+$wgc-column-groups: (
+  (
+    denominator:         1,
+    singular-form:       'whole',
+    plural-form:         'wholes',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-wholes
+  ),
+  (
+    denominator:         2,
+    singular-form:       'half',
+    plural-form:         'halves',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-halves
+  ),
+  (
+    denominator:         3,
+    singular-form:       'third',
+    plural-form:         'thirds',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-thirds
+  ),
+  (
+    denominator:         4,
+    singular-form:       'quarter',
+    plural-form:         'quarters',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-quarters
+  ),
+  (
+    denominator:         5,
+    singular-form:       'fifth',
+    plural-form:         'fifths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-fifths
+  ),
+  (
+    denominator:         6,
+    singular-form:       'sixth',
+    plural-form:         'sixths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-sixths
+  ),
+  (
+    denominator:         7,
+    singular-form:       'seventh',
+    plural-form:         'sevenths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-sevenths
+  ),
+  (
+    denominator:         8,
+    singular-form:       'eighth',
+    plural-form:         'eighths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-eighths
+  ),
+  (
+    denominator:         9,
+    singular-form:       'ninth',
+    plural-form:         'ninths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-ninths
+  ),
+  (
+    denominator:         10,
+    singular-form:       'tenth',
+    plural-form:         'tenths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-tenths
+  ),
+  (
+    denominator:         11,
+    singular-form:       'eleventh',
+    plural-form:         'elevenths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-elevenths
+  ),
+  (
+    denominator:         12,
+    singular-form:       'twelfth',
+    plural-form:         'twelfths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-twelfths
+  ),
+  (
+    denominator:         13,
+    singular-form:       'thirteenth',
+    plural-form:         'thirteenths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-thirteenths
+  ),
+  (
+    denominator:         14,
+    singular-form:       'fourteenth',
+    plural-form:         'fourteenths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-fourteenths
+  ),
+  ( denominator:         15,
+    singular-form:       'fifteenth',
+    plural-form:         'fifteenths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-fifteenths
+  ),
+  (
+    denominator:         16,
+    singular-form:       'sixteenth',
+    plural-form:         'sixteenths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-sixteenths
+  ),
+  ( denominator:         17,
+    singular-form:       'seventeenth',
+    plural-form:         'seventeenths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-seventeenths
+  ),
+  (
+    denominator:         18,
+    singular-form:       'eighteenth',
+    plural-form:         'eighteenths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-eighteenths
+  ),
+  (
+    denominator:         19,
+    singular-form:       'nineteenth',
+    plural-form:         'nineteenths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-nineteenths
+  ),
+  (
+    denominator:         20,
+    singular-form:       'twentieth',
+    plural-form:         'twentieths',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-column-group-twentieths
+  )
+) !default;
+
+$wgc-numerators: (
+  (
+    numeral: 1,
+    word:    'one'
+  ),
+  (
+    numeral: 2,
+    word:    'two'
+  ),
+  (
+    numeral: 3,
+    word:    'three'
+  ),
+  (
+    numeral: 4,
+    word:    'four'
+  ),
+  (
+    numeral: 5,
+    word:    'five'
+  ),
+  (
+    numeral: 6,
+    word:    'six'
+  ),
+  (
+    numeral: 7,
+    word:    'seven'
+  ),
+  (
+    numeral: 8,
+    word:    'eight'
+  ),
+  (
+    numeral: 9,
+    word:    'nine'
+  ),
+  (
+    numeral: 10,
+    word:    'ten'
+  ),
+  ( numeral: 11,
+    word:    'eleven'
+  ),
+  (
+    numeral: 12,
+    word:    'twelve'
+  ),
+  (
+    numeral: 13,
+    word:    'thirteen'
+  ),
+  (
+    numeral: 14,
+    word:    'fourteen'
+  ),
+  (
+    numeral: 15,
+    word:    'fifteen'
+  ),
+  (
+    numeral: 16,
+    word:    'sixteen'
+  ),
+  (
+    numeral: 17,
+    word:    'seventeen'
+  ),
+  (
+    numeral: 18,
+    word:    'eighteen'
+  ),
+  (
+    numeral: 19,
+    word:    'nineteen'
+  ),
+  (
+    numeral: 20,
+    word:    'twenty'
+  )
+);
+
+@function numerator-to-word($numerator) {
+  @each $word, $numeral in $wgc-numerators {
+    @if ($numerator == $numeral) {
+      @return $word;
+    }
+  }
+}
+
+@function denominator-to-word($column-group, $numerator) {
+  @if ($numerator == 1) {
+    @return map-get($column-group, singular-form);
+
+  } @else {
+
+    @return map-get($column-group, plural-form);
+  }
+}
+
+@mixin wgc-columns($column-group, $breakpoint-scope, $allowed-breakpoints) {
+  @if (breakpoint-scope-is-allowed($breakpoint-scope, $allowed-breakpoints)) {
+    @if (map-get($column-group, plural-form) == wholes) {
+      .#{$wgc-namespace}__#{$breakpoint-scope}-column-width--one-whole {
+        width: 100%;
+      }
+
+    } @else {
+
+      $denominator: map-get($column-group, denominator);
+      @for $numerator from 1 to $denominator {
+        $bem-modifier: "#{numerator-to-word($numerator)}-#{denominator-to-word($column-group, $numerator)}";
+
+        .#{$wgc-namespace}__#{$breakpoint-scope}-column-width--#{$bem-modifier} {
+          width: ($numerator / $denominator) * 100% !important;
+        }
+
+        .#{$wgc-namespace}__#{$breakpoint-scope}-column-offset--#{$bem-modifier} {
+          margin-left: ($numerator / $denominator) * 100% !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin wgc-offsets($column-group, $breakpoint-scope, $allowed-breakpoints) {
+  @if (breakpoint-scope-is-allowed($breakpoint-scope, $allowed-breakpoints)) {
+    @if (map-get($column-group, plural-form) != wholes) {
+
+      $denominator: map-get($column-group, denominator);
+      @for $numerator from 1 to $denominator {
+        $bem-modifier: "#{numerator-to-word($numerator)}-#{denominator-to-word($column-group, $numerator)}";
+
+        .#{$wgc-namespace}__#{$breakpoint-scope}-column-offset--#{$bem-modifier} {
+          margin-left: ($numerator / $denominator) * 100% !important;
+        }
+      }
+    }
+  }
+}
+
+@each $breakpoint in $wgc-breakpoints {
+  $breakpoint-scope: map-get($breakpoint, breakpoint-scope);
+  @include wgc-media-query($breakpoint-scope) {
+    @each $column-group in $wgc-column-groups {
+      $allowed-breakpoints: map-get($column-group, allowed-breakpoints);
+      @include wgc-columns($column-group, $breakpoint-scope, $allowed-breakpoints);
+      @include wgc-offsets($column-group, $breakpoint-scope, $allowed-breakpoints);
+    }
+  }
+}

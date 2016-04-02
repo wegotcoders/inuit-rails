@@ -1,0 +1,9 @@
+@function breakpoint-scope-is-allowed($breakpoint-scope, $permitted-list) {
+  @each $scope in $permitted-list {
+    @if ($breakpoint-scope == $scope) {
+      @return true;
+    }
+  }
+
+  @return false;
+}

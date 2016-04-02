@@ -1,0 +1,19 @@
+@mixin wgc-media-query($device-alias) {
+  $breakpoint-found: false;
+
+  @each $breakpoint in $wgc-breakpoints {
+    $breakpoint-scope:     map-get($breakpoint, breakpoint-scope);
+    $breakpoint-condition: map-get($breakpoint, breakpoint-condition);
+
+    @if ($device-alias == $breakpoint-scope) {
+      $breakpoint-found: true;
+      @media #{$breakpoint-condition} {
+        @content;
+      }
+    }
+  }
+
+  @if $breakpoint-found == false {
+    @warn 'Oops! Breakpoint ‘#{$device-alias}’ does not exist.'
+  }
+}

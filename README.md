@@ -3,18 +3,12 @@ inuit-rails
 
 Compiling inuitcss with Rails Sprockets + some extra great stuff!
 
-Using inuit-rails
-------------------
-
-For an example of this framework being used in anger take a look at our
-[demo page](https://wegotcoders-inuit-rails-demo.herokuapp.com/).
-
-The corresponding set-up is located in `examples/main.scss`
-
 Configuration
 --------------
 
-The 'vanilla inuit' modules within `vendor/app/stylesheets/inuit/` must be imported in the following order
+For a working example take a look in `example/main.scss`
+
+The 'vanilla inuit' modules within `inuitcss/` and `csswizardry/` must be imported in the following order
 
 1. Settings
 2. Tools
@@ -41,6 +35,8 @@ E.G.
   // Objects would go next...
 ```
 
+For help using the additional wegotcoders modules (recommended), please RTFM at https://wegotcoders.github.io/inuit-rails/
+
 About
 -----
 
@@ -49,14 +45,14 @@ This gem combines all of the repos on the new inuitcss github page
 
 A few of the files here have been included from the older inuitcss repo at
 [https://github.com/csswizardry/inuit.css/] since they are not yet covered by the
-newest version. These are located in `/wgc/csswizardy`.
+newest version. These are located in `/csswizardy`.
 
-Some custom inuit-esque files are located in `wgc/modified_inuit_behaviour`.
+Some custom inuit-esque files are located in `wegotcoders/modified_inuit_behaviour`.
 The syntax here has been adapted for improved 'guessability'. In addition each
 class has been coupled to all of the breakpoints.
 
 Some extra helper files, including a color palette, are located in
-`wgc/additional_behaviour`. These can be useful
+`wegotcoders/additional_behaviour`. These can be useful
 for customising elements beyond the basic macros of the inuitcss
 classes.
 

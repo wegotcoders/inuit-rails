@@ -41,10 +41,10 @@ About
 -----
 
 This gem combines all of the repos on the new inuitcss github page
-[https://github.com/inuitcss].
+https://github.com/inuitcss.
 
 A few of the files here have been included from the older inuitcss repo at
-[https://github.com/csswizardry/inuit.css/] since they are not yet covered by the
+https://github.com/csswizardry/inuit.css/ since they are not yet covered by the
 newest version. These are located in `/csswizardy`.
 
 Some custom inuit-esque files are located in `wegotcoders/modified_inuit_behaviour`.

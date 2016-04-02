@@ -98,32 +98,32 @@ $wgc-negative-margin-options: (
 
     @if (breakpoint-scope-is-allowed($breakpoint-scope, $allowed-breakpoints)) {
       @include wgc-media-query($breakpoint-scope) {
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-paddings-all--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-paddings-all--#{$bem-modifier} {
           padding:         $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-padding-top--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-padding-top--#{$bem-modifier} {
           padding-top:     $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-padding-right--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-padding-right--#{$bem-modifier} {
           padding-right:   $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-padding-bottom--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-padding-bottom--#{$bem-modifier} {
           padding-bottom:  $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-padding-left--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-padding-left--#{$bem-modifier} {
           padding-left:    $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-paddings-horizontal--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-paddings-horizontal--#{$bem-modifier} {
           padding-right:   $dimension !important;
           padding-left:    $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-paddings-vertical--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-paddings-vertical--#{$bem-modifier} {
           padding-top:     $dimension !important;
           padding-bottom:  $dimension !important;
         }
@@ -138,32 +138,32 @@ $wgc-negative-margin-options: (
 
     @if (breakpoint-scope-is-allowed($breakpoint-scope, $allowed-breakpoints)) {
       @include wgc-media-query($breakpoint-scope) {
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-margins-all--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-margins-all--#{$bem-modifier} {
           margin:         $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-margin-top--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-margin-top--#{$bem-modifier} {
           margin-top:     $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-margin-right--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-margin-right--#{$bem-modifier} {
           margin-right:   $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-margin-bottom--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-margin-bottom--#{$bem-modifier} {
           margin-bottom:  $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-margin-left--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-margin-left--#{$bem-modifier} {
           margin-left:    $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-margins-horizontal--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-margins-horizontal--#{$bem-modifier} {
           margin-right:   $dimension !important;
           margin-left:    $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-margins-vertical--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-margins-vertical--#{$bem-modifier} {
           margin-top:     $dimension !important;
           margin-bottom:  $dimension !important;
         }
@@ -178,32 +178,32 @@ $wgc-negative-margin-options: (
 
     @if (breakpoint-scope-is-allowed($breakpoint-scope, $allowed-breakpoints)) {
       @include wgc-media-query($breakpoint-scope) {
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-negative-margins-all--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-negative-margins-all--#{$bem-modifier} {
           margin:         $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-negative-margin-top--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-negative-margin-top--#{$bem-modifier} {
           margin-top:     $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-negative-margin-right--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-negative-margin-right--#{$bem-modifier} {
           margin-right:   $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-negative-margin-bottom--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-negative-margin-bottom--#{$bem-modifier} {
           margin-bottom:  $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-negative-margin-left--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-negative-margin-left--#{$bem-modifier} {
           margin-left:    $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-negative-margins-horizontal--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-negative-margins-horizontal--#{$bem-modifier} {
           margin-right:   $dimension !important;
           margin-left:    $dimension !important;
         }
 
-        .#{$wgc-namespace}__#{$wgc-generate-spacing-alias}-negative-margins-vertical--#{$bem-modifier} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-negative-margins-vertical--#{$bem-modifier} {
           margin-top:     $dimension !important;
           margin-bottom:  $dimension !important;
         }

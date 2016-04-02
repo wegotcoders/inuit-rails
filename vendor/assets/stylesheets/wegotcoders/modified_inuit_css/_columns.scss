@@ -201,9 +201,12 @@ $wgc-numerators: (
   )
 );
 
-@function numerator-to-word($numerator) {
-  @each $word, $numeral in $wgc-numerators {
-    @if ($numerator == $numeral) {
+@function numerator-to-word($given-numerator) {
+  @each $numerator in $wgc-numerators {
+    $numeral: map-get($numerator, numeral);
+    $word:    map-get($numerator, word);
+
+    @if ($given-numerator == $numeral) {
       @return $word;
     }
   }

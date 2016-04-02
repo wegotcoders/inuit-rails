@@ -38,57 +38,59 @@ $wgc-breakpoints: (
   )
 ) !default;
 
-$wgc-allowed-breakpoints-for-guttering-option--flush:           ();
-$wgc-allowed-breakpoints-for-guttering-option--one-quarter-bsu: ();
-$wgc-allowed-breakpoints-for-guttering-option--one-half-bsu:    ();
-$wgc-allowed-breakpoints-for-guttering-option--one-bsu:         ();
-$wgc-allowed-breakpoints-for-guttering-option--two-bsu:         ();
-$wgc-allowed-breakpoints-for-guttering-option--four-bsu:        ();
+$main-breakpoints: ('palm', 'lap-and-up', 'desk');
 
-$wgc-allowed-breakpoints-for-column-group-wholes:               ();
-$wgc-allowed-breakpoints-for-column-group-halves:               ();
-$wgc-allowed-breakpoints-for-column-group-thirds:               ();
-$wgc-allowed-breakpoints-for-column-group-quarters:             ();
-$wgc-allowed-breakpoints-for-column-group-fifths:               ();
-$wgc-allowed-breakpoints-for-column-group-sixths:               ();
-$wgc-allowed-breakpoints-for-column-group-sevenths:             ();
-$wgc-allowed-breakpoints-for-column-group-eighths:              ();
-$wgc-allowed-breakpoints-for-column-group-ninths:               ();
-$wgc-allowed-breakpoints-for-column-group-tenths:               ();
-$wgc-allowed-breakpoints-for-column-group-elevenths:            ();
-$wgc-allowed-breakpoints-for-column-group-twelfths:             ();
-$wgc-allowed-breakpoints-for-column-group-thirteenths:          ();
-$wgc-allowed-breakpoints-for-column-group-fourteenths:          ();
-$wgc-allowed-breakpoints-for-column-group-fifteenths:           ();
-$wgc-allowed-breakpoints-for-column-group-sixteenths:           ();
-$wgc-allowed-breakpoints-for-column-group-seventeenths:         ();
-$wgc-allowed-breakpoints-for-column-group-eighteenths:          ();
-$wgc-allowed-breakpoints-for-column-group-nineteenths:          ();
-$wgc-allowed-breakpoints-for-column-group-twentieths:           ();
+$wgc-allowed-breakpoints-for-guttering-option--flush:           $main-breakpoints;
+$wgc-allowed-breakpoints-for-guttering-option--one-quarter-bsu: $main-breakpoints;
+$wgc-allowed-breakpoints-for-guttering-option--one-half-bsu:    ('lap-and-up');
+$wgc-allowed-breakpoints-for-guttering-option--one-bsu:         $main-breakpoints;
+$wgc-allowed-breakpoints-for-guttering-option--two-bsu:         $main-breakpoints;
+$wgc-allowed-breakpoints-for-guttering-option--four-bsu:        ('desk');
 
-$wgc-allowed-breakpoints-for-paddings--none:                    ();
-$wgc-allowed-breakpoints-for-paddings--one-quarter-bsu:         ();
-$wgc-allowed-breakpoints-for-paddings--one-half-bsu:            ();
-$wgc-allowed-breakpoints-for-paddings--one-bsu:                 ();
-$wgc-allowed-breakpoints-for-paddings--two-bsu:                 ();
-$wgc-allowed-breakpoints-for-paddings--four-bsu:                ();
-$wgc-allowed-breakpoints-for-margins--none:                     ();
-$wgc-allowed-breakpoints-for-margins--one-quarter-bsu:          ();
-$wgc-allowed-breakpoints-for-margins--one-half-bsu:             ();
-$wgc-allowed-breakpoints-for-margins--one-bsu:                  ();
-$wgc-allowed-breakpoints-for-margins--two-bsu:                  ();
-$wgc-allowed-breakpoints-for-margins--four-bsu:                 ();
-$wgc-allowed-breakpoints-for-negative-margins--one-quarter-bsu: ();
-$wgc-allowed-breakpoints-for-negative-margins--one-half-bsu:    ();
-$wgc-allowed-breakpoints-for-negative-margins--one-bsu:         ();
-$wgc-allowed-breakpoints-for-negative-margins--two-bsu:         ();
-$wgc-allowed-breakpoints-for-negative-margins--four-bsu:        ();
+$wgc-allowed-breakpoints-for-column-group-wholes:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-halves:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-thirds:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-quarters:             $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-fifths:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-sixths:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-sevenths:             ('palm', 'lap-and-up');
+$wgc-allowed-breakpoints-for-column-group-eighths:              $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-ninths:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-tenths:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-elevenths:            $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-twelfths:             $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-thirteenths:          $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-fourteenths:          $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-fifteenths:           $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-sixteenths:           $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-seventeenths:         $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-eighteenths:          $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-nineteenths:          $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-twentieths:           ('palm');
 
-$wgc-allowed-breakpoints-for-layout-helpers:                    ();
-$wgc-allowed-breakpoints-for-colours:                           ();
-$wgc-allowed-breakpoints-for-borders:                           ();
-$wgc-allowed-breakpoints-for-lists:                             ();
-$wgc-allowed-breakpoints-for-typography:                        ();
+$wgc-allowed-breakpoints-for-paddings--none:                    $main-breakpoints;
+$wgc-allowed-breakpoints-for-paddings--one-quarter-bsu:         ('all-devices');
+$wgc-allowed-breakpoints-for-paddings--one-half-bsu:            $main-breakpoints;
+$wgc-allowed-breakpoints-for-paddings--one-bsu:                 $main-breakpoints;
+$wgc-allowed-breakpoints-for-paddings--two-bsu:                 $main-breakpoints;
+$wgc-allowed-breakpoints-for-paddings--four-bsu:                $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--none:                     $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--one-quarter-bsu:          $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--one-half-bsu:             $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--one-bsu:                  $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--two-bsu:                  $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--four-bsu:                 $main-breakpoints;
+$wgc-allowed-breakpoints-for-negative-margins--one-quarter-bsu: $main-breakpoints;
+$wgc-allowed-breakpoints-for-negative-margins--one-half-bsu:    $main-breakpoints;
+$wgc-allowed-breakpoints-for-negative-margins--one-bsu:         $main-breakpoints;
+$wgc-allowed-breakpoints-for-negative-margins--two-bsu:         $main-breakpoints;
+$wgc-allowed-breakpoints-for-negative-margins--four-bsu:        $main-breakpoints;
+
+$wgc-allowed-breakpoints-for-layout-helpers:                    $main-breakpoints;
+$wgc-allowed-breakpoints-for-colours:                           $main-breakpoints;
+$wgc-allowed-breakpoints-for-borders:                           $main-breakpoints;
+$wgc-allowed-breakpoints-for-lists:                             $main-breakpoints;
+$wgc-allowed-breakpoints-for-typography:                        $main-breakpoints;
 
 /*                               *\
   Import vanilla inuitcss modules

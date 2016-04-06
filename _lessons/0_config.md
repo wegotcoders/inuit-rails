@@ -3,7 +3,7 @@ title: Configuration
 slug: configuration
 ---
 
-The defualt configuration variables are defined as follows in `_wgc_config.scss`.
+The defualt configuration variables are defined as follows in `_wgc_config.scss`:
 
 (For an example of how to override this please see `examples/main.scss` in the gem.)
 

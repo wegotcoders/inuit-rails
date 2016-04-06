@@ -1,0 +1,298 @@
+$aqua:          #0B57A4;
+$baby-blue:     #B8D0E8;
+$black:         #000000;
+$blue:          #009CDF;
+$blue-green:    #148AA5;
+$blue-violet:   #3714A4;
+$brown:         #964B00;
+$crimson:       #A50516;
+$dark-blue:     #1172AE;
+$dark-green:    #09992A;
+$dark-grey:     #333333;
+$dark-ruby:     #870E14;
+$dark-sand:     #CE8600;
+$deep-pink:     #FB3C8F;
+$fuschia:       #A51497;
+$field-grey:    #C0C0C0;
+$grey:          #D2D2D2;
+$green:         #3AA03A;
+$hot-pink:      #FF0080;
+$lemon:         #FEE233;
+$light-blue:    #8BBDEB;
+$light-brown:   #3E3D37;
+$light-green:   #67AE11;
+$light-grey:    #EEEEEE;
+$light-red:     #FC6A6C;
+$lilac:         #BA9DE9;
+$lime:          #C1FD33;
+$lime-green:    #2BFD2F;
+$magenta:       #FC1CAD;
+$medium-grey:   #CCCCCC;
+$midnight-blue: #000066;
+$off-white:     #FCFCFC;
+$olive:         #2B4726;
+$orange:        #FD7222;
+$orange-red:    #FC331C;
+$orange-yellow: #FFCC00;
+$peach:         #FFE5B4;
+$pink:          #DF0043;
+$purple:        #AF31F2;
+$red:           #FC0D1B;
+$red-orange:    #D7462C;
+$ruby:          #CC342C;
+$sea-blue:      #33C4D3;
+$salmon:        #F69E94;
+$shale:         #21201B;
+$tan:           #F2DDBF;
+$teal:          #2B8A6D;
+$violet:        #6B28CE;
+$violet-blue:   #6041FA;
+$white:         #FFFFFF;
+$yellow:        #FEEE35;
+$yellow-green:  #DEFD35;
+$yellow-orange: #FEC42E;
+
+$wgc-colours: (
+  (
+    name: 'aqua',
+    hex-code: $aqua
+  ),
+  (
+    name: 'baby-blue',
+    hex-code: $baby-blue
+  ),
+  (
+    name: 'black',
+    hex-code: $black
+  ),
+  (
+    name: 'blue',
+    hex-code: $blue
+  ),
+  (
+    name: 'blue-green',
+    hex-code: $blue-green
+  ),
+  (
+    name: 'blue-violet',
+    hex-code: $blue-violet
+  ),
+  (
+    name: 'brown',
+    hex-code: $brown
+  ),
+  (
+    name: 'crimson',
+    hex-code: $crimson
+  ),
+  (
+    name: 'dark-blue',
+    hex-code: $dark-blue
+  ),
+  (
+    name: 'dark-green',
+    hex-code: $dark-green
+  ),
+  (
+    name: 'dark-grey',
+    hex-code: $dark-grey
+  ),
+  (
+    name: 'dark-ruby',
+    hex-code: $dark-ruby
+  ),
+  (
+    name: 'dark-sand',
+    hex-code: $dark-sand
+  ),
+  (
+    name: 'deep-pink',
+    hex-code: $deep-pink
+  ),
+  (
+    name: 'fuschia',
+    hex-code: $fuschia
+  ),
+  (
+    name: 'field-grey',
+    hex-code: $field-grey
+  ),
+  (
+    name: 'grey',
+    hex-code: $grey
+  ),
+  (
+    name: 'green',
+    hex-code: $green
+  ),
+  (
+    name: 'hot-pink',
+    hex-code: $hot-pink
+  ),
+  (
+    name: 'lemon',
+    hex-code: $lemon
+  ),
+  (
+    name: 'light-blue',
+    hex-code: $light-blue
+  ),
+  (
+    name: 'light-brown',
+    hex-code: $light-brown
+  ),
+  (
+    name: 'light-green',
+    hex-code: $light-green
+  ),
+  (
+    name: 'light-grey',
+    hex-code: $light-grey
+  ),
+  (
+    name: 'light-red',
+    hex-code: $light-red
+  ),
+  (
+    name: 'lilac',
+    hex-code: $lilac
+  ),
+  (
+    name: 'lime',
+    hex-code: $lime
+  ),
+  (
+    name: 'lime-green',
+    hex-code: $lime-green
+  ),
+  (
+    name: 'magenta',
+    hex-code: $magenta
+  ),
+  (
+    name: 'medium-grey',
+    hex-code: $medium-grey
+  ),
+  (
+    name: 'midnight-blue',
+    hex-code: $midnight-blue
+  ),
+  (
+    name: 'off-white',
+    hex-code: $off-white
+  ),
+  (
+    name: 'olive',
+    hex-code: $olive
+  ),
+  (
+    name: 'orange',
+    hex-code: $orange
+  ),
+  (
+    name: 'orange-red',
+    hex-code: $orange-red
+  ),
+  (
+    name: 'orange-yellow',
+    hex-code: $orange-yellow
+  ),
+  (
+    name: 'peach',
+    hex-code: $peach
+  ),
+  (
+    name: 'pink',
+    hex-code: $pink
+  ),
+  (
+    name: 'purple',
+    hex-code: $purple
+  ),
+  (
+    name: 'red',
+    hex-code: $red
+  ),
+  (
+    name: 'red-orange',
+    hex-code: $red-orange
+  ),
+  (
+    name: 'ruby',
+    hex-code: $ruby
+  ),
+  (
+    name: 'sea-blue',
+    hex-code: $sea-blue
+  ),
+  (
+    name: 'salmon',
+    hex-code: $salmon
+  ),
+  (
+    name: 'shale',
+    hex-code: $shale
+  ),
+  (
+    name: 'tan',
+    hex-code: $tan
+  ),
+  (
+    name: 'teal',
+    hex-code: $teal
+  ),
+  (
+    name: 'violet',
+    hex-code: $violet
+  ),
+  (
+    name: 'violet-blue',
+    hex-code: $violet-blue
+  ),
+  (
+    name: 'white',
+    hex-code: $white
+  ),
+  (
+    name: 'yellow',
+    hex-code: $yellow
+  ),
+  (
+    name: 'yellow-green',
+    hex-code: $yellow-green
+  ),
+  (
+    name: 'yellow-orange',
+    hex-code: $yellow-orange
+  )
+) !default;
+
+@mixin wgc-colour-classes($name, $hex-code, $breakpoint-scope, $allowed-breakpoints) {
+  @if (breakpoint-scope-is-allowed($breakpoint-scope, $allowed-breakpoints)) {
+    .#{$wgc-namespace}__#{$breakpoint-scope}-text-color--#{$name} {
+      color: $hex-code;
+    }
+
+    .#{$wgc-namespace}__#{$breakpoint-scope}-background-color--#{$name} {
+      background-color: $hex-code;
+    }
+
+    .#{$wgc-namespace}__#{$breakpoint-scope}-border-color--#{$name} {
+      border-color: $hex-code;
+    }
+  }
+}
+
+@each $breakpoint in $wgc-breakpoints {
+  $breakpoint-scope:    map-get($breakpoint, breakpoint-scope);
+  $allowed-breakpoints: $wgc-allowed-breakpoints-for-colours;
+
+  @include wgc-media-query($breakpoint-scope) {
+    @each $colour in $wgc-colours {
+      $name:     map-get($colour, name);
+      $hex-code: map-get($colour, hex-code);
+
+      @include wgc-colour-classes($name, $hex-code, $breakpoint-scope, $allowed-breakpoints)
+    }
+  }
+}

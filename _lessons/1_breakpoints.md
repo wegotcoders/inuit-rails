@@ -3,54 +3,61 @@ title: Breakpoints
 slug: breakpoints
 ---
 
-In your `main.scss` file, override `$wgc-breakpoints` as you wish. Be careful to observe the hyphen in the syntax `"#{breakpoint}-"`.
+In your `main.scss` file, define your desired breakpoints in `$wgc-breakpoints` as a sass map.
 
 For example,
 
 {% highlight scss %}
   $wgc-breakpoints: (
-    "palm-"          "screen and (max-width: 44.9375em)",
-    "lap-"           "screen and (min-width: 45em) and (max-width: 63.9375em)",
-    "custom-"        "screen and (min-width: 79em)",
-  );
-{% endhighlight %}
-
-The default breakpoints are
-
-{% highlight scss %}
-  $wgc-breakpoints: (
-    ""               "screen and (min-width: 0em)",
-    "palm-"          "screen and (max-width: 44.9375em)",
-    "lap-"           "screen and (min-width: 45em) and (max-width: 63.9375em)",
-    "lap-and-up-"    "screen and (min-width: 45em)",
-    "portable-"      "screen and (max-width: 63.9375em)",
-    "desk-"          "screen and (min-width: 64em)",
-    "retina-"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+    (
+      breakpoint-scope:     'all-devices',
+      breakpoint-condition: 'screen and (min-width: 0em)'
+    ),
+    (
+      breakpoint-scope:     'palm',
+      breakpoint-condition: 'screen and (max-width: 44.9375em)'
+    ),
+    (
+      breakpoint-scope:     'lap',
+      breakpoint-condition: 'screen and (min-width: 45em) and (max-width: 63.9375em)'
+    ),
+    (
+      breakpoint-scope:     'lap-and-up',
+      breakpoint-condition: 'screen and (min-width: 45em)'
+    ),
+    (
+      breakpoint-scope:     'portable',
+      breakpoint-condition: 'screen and (max-width: 63.9375em)'
+    ),
+    (
+      breakpoint-scope:     'desk',
+      breakpoint-condition: 'screen and (min-width: 64em)'
+    )
   ) !default;
 {% endhighlight %}
 
-These breakpoints are iterated over by the `wgc-media-query` mixin in `_breakpoints.scss`
+These breakpoints are iterated over by the `wgc-media-query` mixin defined in `_breakpoints.scss`
 
 {% highlight scss %}
-  @mixin wgc-media-query($mq) {
-    $breakpoint-found: false;
+@mixin wgc-media-query($device-alias) {
+  $breakpoint-found: false;
 
-    @each $wgc-breakpoint in $wgc-breakpoints {
-      $alias:     nth($wgc-breakpoint, 1);
-      $condition: nth($wgc-breakpoint, 2);
+  @each $breakpoint in $wgc-breakpoints {
+    $breakpoint-scope:     map-get($breakpoint, breakpoint-scope);
+    $breakpoint-condition: map-get($breakpoint, breakpoint-condition);
 
-      @if $mq == $alias and $condition {
-        $breakpoint-found: true;
-        @media #{$condition} {
-          @content;
-        }
+    @if ($device-alias == $breakpoint-scope) {
+      $breakpoint-found: true;
+      @media #{$breakpoint-condition} {
+        @content;
       }
     }
-
-    @if $breakpoint-found == false{
-      @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
-    }
   }
+
+  @if $breakpoint-found == false {
+    @warn 'Oops! Breakpoint ‘#{$device-alias}’ does not exist.'
+  }
+}
 {% endhighlight %}
 
 **WARNING:**

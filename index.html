@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-<h2 class="wgc__margin-left--one-bsu wgc__margin-top--one-half-bsu">Lessons:</h2>
+<h2 class="wgc__lap-and-up-margin-left--one-bsu wgc__lap-and-up-margin-top--one-half-bsu">Lessons:</h2>
 
-<ol class="wgc__margin-left--four-bsu">
+<ol class="wgc__lap-and-up-margin-left--four-bsu" start="0">
   {% for lesson in site.lessons %}
     <h3>
       <li>
-        <a class="wgc__text-decoration--none wgc__text-color--black site_specific__hover-link" href="{{ lesson.url | prepend: site.baseurl | prepend: site.github.baseurl }}">{{ lesson.title }}</a>
+        <a class="wgc__lap-and-up-text-decoration--none wgc__lap-and-up-text-color--black site_specific__hover-link" href="{{ lesson.url | prepend: site.baseurl | prepend: site.github.baseurl }}">{{ lesson.title }}</a>
       </li>
     </h3>
   {% endfor %}

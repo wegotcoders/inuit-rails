@@ -3,20 +3,20 @@
   {% include head.html %}
   <body>
     {% include header.html %}
-    <main class="wgc__layout-group--gutter-two-bsu">
-      <nav class="wgc__column-width--one-fifth wgc__layout__item wgc__margin-top--two-bsu wgc__vertical-align--top">
-        <ul class="wgc__list-style--none">
+    <main class="wgc__lap-and-up-layout-group__container--two-bsu">
+      <nav class="wgc__lap-and-up-column-width--one-fifth wgc__layout-group__member wgc__lap-and-up-margin-top--two-bsu wgc__lap-and-up-vertical-align--top">
+        <ul class="wgc__lap-and-up-list-style--none">
           {% for lesson in site.lessons %}
             <h3>
               <li>
-                <a class="wgc__text-decoration--none wgc__text-color--black site_specific__hover-link" href="{{ site.baseurl | site.github.baseurl }}{{ lesson.url }}">{{ lesson.title }}</a>
+                <a class="wgc__lap-and-up-text-decoration--none wgc__lap-and-up-text-color--black site_specific__hover-link" href="{{ site.baseurl | site.github.baseurl }}{{ lesson.url }}">{{ lesson.title }}</a>
               </li>
             </h3>
           {% endfor %}
         </ul>
-      </nav>
+      </nav><!--
 
-      <article class="wgc__column-width--three-fifths wgc__margin-top--two-bsu wgc__layout__item">
+      --><article class="wgc__lap-and-up-column-width--four-fifths wgc__lap-and-up-margin-top--two-bsu wgc__layout-group__member">
         {{ content }}
       </article>
     </main>

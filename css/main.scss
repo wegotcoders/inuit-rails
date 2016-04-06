@@ -49,75 +49,155 @@ $on-laptop:        800px;
   'jekyll_defaults/syntax-highlighting'
 ;
 
-// inuitcss
+// Site specific css (kept to a minimum)
 
-/* Set variables */
-$inuit-enable-btn--small:                      true;
-$inuit-enable-btn--large:                      true;
-$inuit-enable-btn--full:                       true;
-$inuit-enable-btn--pill:                       true;
+@import
+  'site_specific/site_specific'
+;
 
-$wgc-enable-layout--flush:                     true;
-$wgc-enable-layout--gutter-one-quarter-bsu:    true;
-$wgc-enable-layout--gutter-one-half-bsu:       true;
-$wgc-enable-layout--gutter-one-bsu:            true;
-$wgc-enable-layout--gutter-two-bsu:            true;
-$wgc-enable-layout--gutter-four-bsu:           true;
-$wgc-enable-layout--center:                    true;
+/*                              *\
+  Set vanilla inuitcss variables
+\*                              */
 
-$wgc-enable-paddings--one-quarter-bsu:         true;
-$wgc-enable-paddings--one-half-bsu:            true;
-$wgc-enable-paddings--one-bsu:                 true;
-$wgc-enable-paddings--two-bsu:                 true;
-$wgc-enable-paddings--four-bsu:                true;
-$wgc-enable-paddings--none:                    true;
+$inuit-enable-btn--small: true;
+$inuit-enable-btn--large: true;
+$inuit-enable-btn--full:  true;
+$inuit-enable-btn--pill:  true;
 
-$wgc-enable-margins--one-quarter-bsu:          true;
-$wgc-enable-margins--one-half-bsu:             true;
-$wgc-enable-margins--one-bsu:                  true;
-$wgc-enable-margins--two-bsu:                  true;
-$wgc-enable-margins--four-bsu:                 true;
-$wgc-enable-margins--none:                     true;
-$wgc-enable-negative-margins--one-quarter-bsu: true;
-$wgc-enable-negative-margins--one-half-bsu:    true;
-$wgc-enable-negative-margins--one-bsu:         true;
-$wgc-enable-negative-margins--two-bsu:         true;
-$wgc-enable-negative-margins--four-bsu:        true;
+/*                         *\
+  Set wegotcoders variables
+\*                         */
 
 $wgc-breakpoints: (
-  ""               "screen and (min-width: 0em)",
-  "lap-and-up-"    "screen and (min-width: 45em)",
+  (
+    breakpoint-scope:     'all-devices',
+    breakpoint-condition: 'screen and (min-width: 0em)'
+  ),
+  (
+    breakpoint-scope:     'palm',
+    breakpoint-condition: 'screen and (max-width: 44.9375em)'
+  ),
+  (
+    breakpoint-scope:     'lap',
+    breakpoint-condition: 'screen and (min-width: 45em) and (max-width: 63.9375em)'
+  ),
+  (
+    breakpoint-scope:     'lap-and-up',
+    breakpoint-condition: 'screen and (min-width: 45em)'
+  ),
+  (
+    breakpoint-scope:     'portable',
+    breakpoint-condition: 'screen and (max-width: 63.9375em)'
+  ),
+  (
+    breakpoint-scope:     'desk',
+    breakpoint-condition: 'screen and (min-width: 64em)'
+  )
 );
 
-/* Import desired files */
+$main-breakpoints: ('palm', 'lap-and-up', 'desk');
+
+$wgc-allowed-breakpoints-for-guttering-option--flush:           $main-breakpoints;
+$wgc-allowed-breakpoints-for-guttering-option--one-quarter-bsu: $main-breakpoints;
+$wgc-allowed-breakpoints-for-guttering-option--one-half-bsu:    $main-breakpoints;
+$wgc-allowed-breakpoints-for-guttering-option--one-bsu:         $main-breakpoints;
+$wgc-allowed-breakpoints-for-guttering-option--two-bsu:         $main-breakpoints;
+$wgc-allowed-breakpoints-for-guttering-option--four-bsu:        $main-breakpoints;
+
+$wgc-allowed-breakpoints-for-column-group-wholes:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-halves:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-thirds:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-quarters:             $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-fifths:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-sixths:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-sevenths:             $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-eighths:              $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-ninths:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-tenths:               $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-elevenths:            $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-twelfths:             $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-thirteenths:          $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-fourteenths:          $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-fifteenths:           $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-sixteenths:           $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-seventeenths:         $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-eighteenths:          $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-nineteenths:          $main-breakpoints;
+$wgc-allowed-breakpoints-for-column-group-twentieths:           $main-breakpoints;
+
+$wgc-allowed-breakpoints-for-paddings--none:                    $main-breakpoints;
+$wgc-allowed-breakpoints-for-paddings--one-quarter-bsu:         $main-breakpoints;
+$wgc-allowed-breakpoints-for-paddings--one-half-bsu:            $main-breakpoints;
+$wgc-allowed-breakpoints-for-paddings--one-bsu:                 $main-breakpoints;
+$wgc-allowed-breakpoints-for-paddings--two-bsu:                 $main-breakpoints;
+$wgc-allowed-breakpoints-for-paddings--four-bsu:                $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--none:                     $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--one-quarter-bsu:          $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--one-half-bsu:             $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--one-bsu:                  $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--two-bsu:                  $main-breakpoints;
+$wgc-allowed-breakpoints-for-margins--four-bsu:                 $main-breakpoints;
+$wgc-allowed-breakpoints-for-negative-margins--one-quarter-bsu: $main-breakpoints;
+$wgc-allowed-breakpoints-for-negative-margins--one-half-bsu:    $main-breakpoints;
+$wgc-allowed-breakpoints-for-negative-margins--one-bsu:         $main-breakpoints;
+$wgc-allowed-breakpoints-for-negative-margins--two-bsu:         $main-breakpoints;
+$wgc-allowed-breakpoints-for-negative-margins--four-bsu:        $main-breakpoints;
+
+$wgc-allowed-breakpoints-for-layout-helpers:                    $main-breakpoints;
+$wgc-allowed-breakpoints-for-colours:                           $main-breakpoints;
+$wgc-allowed-breakpoints-for-borders:                           $main-breakpoints;
+$wgc-allowed-breakpoints-for-lists:                             $main-breakpoints;
+$wgc-allowed-breakpoints-for-typography:                        $main-breakpoints;
+
+/*                               *\
+  Import vanilla inuitcss modules
+\*                               */
+
 @import
   'inuitcss/settings.defaults',
   'inuitcss/tools.mixins',
   'inuitcss/tools.functions',
   'inuitcss/generic.normalize',
   'inuitcss/generic.box-sizing',
-  'inuitcss/base.headings',
   'inuitcss/objects.buttons',
-  'inuitcss/trumps.clearfix',
-
-  'wgc/wgc_config',
-
-  'wgc/css_wizardy/generic.shared',
-  'wgc/css_wizardy/base.forms',
-  'wgc/css_wizardy/objects.flyout',
-
-  'wgc/modified_inuit_css/breakpoints',
-  'wgc/modified_inuit_css/layout_groups',
-  'wgc/modified_inuit_css/columns',
-  'wgc/modified_inuit_css/box_model',
-
-  'wgc/wgc_add_ons/layout_helpers',
-  'wgc/wgc_add_ons/borders',
-  'wgc/wgc_add_ons/colors',
-  'wgc/wgc_add_ons/typography',
-  'wgc/wgc_add_ons/lists'
+  'inuitcss/trumps.clearfix'
 ;
 
-// site specific
+/*                          *\
+  Import css_wizardy modules
+\*                          */
 
-@import 'site_specific/site_specific.scss';
+@import
+  'css_wizardy/generic.shared',
+  'css_wizardy/base.forms',
+  'css_wizardy/objects.flyout'
+;
+
+/*                          *\
+  Import wegotcoders modules
+\*                          */
+
+/* The order here:
+  'wegotcoders/wgc_config',
+
+  'wegotcoders/modified_inuit_css/breakpoints',
+  'wegotcoders/modified_inuit_css/functions',
+
+  is crucial!
+*/
+
+@import
+  'wegotcoders/wgc_config',
+
+  'wegotcoders/modified_inuit_css/breakpoints',
+  'wegotcoders/modified_inuit_css/functions',
+  'wegotcoders/modified_inuit_css/layout_groups',
+  'wegotcoders/modified_inuit_css/columns',
+  'wegotcoders/modified_inuit_css/box_model',
+
+  'wegotcoders/wgc_add_ons/layout_helpers',
+  'wegotcoders/wgc_add_ons/borders',
+  'wegotcoders/wgc_add_ons/colours',
+  'wegotcoders/wgc_add_ons/lists',
+  'wegotcoders/wgc_add_ons/typography'
+;

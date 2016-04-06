@@ -1,0 +1,72 @@
+@each $breakpoint in $wgc-breakpoints {
+  $breakpoint-scope:    map-get($breakpoint, breakpoint-scope);
+  $allowed-breakpoints: $wgc-allowed-breakpoints-for-layout-helpers;
+
+  @if (breakpoint-scope-is-allowed($breakpoint-scope, $allowed-breakpoints)) {
+    @include wgc-media-query($breakpoint-scope) {
+
+      // Box Sizing
+      .#{$wgc-namespace}__#{$breakpoint-scope}-box-sizing--border-box {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+
+      // Float
+      .#{$wgc-namespace}__#{$breakpoint-scope}-float--left {
+        float: left;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-float--right {
+        float: right;
+      }
+
+      // Clear
+      .#{$wgc-namespace}__#{$breakpoint-scope}-clear--left {
+        clear: left;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-clear--right {
+        clear: right;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-clear--both {
+        clear: both;
+      }
+
+      // Display
+      .#{$wgc-namespace}__#{$breakpoint-scope}-display--inline-block {
+        display: inline-block;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-display--block {
+        display: block;
+      }
+
+      // Overflow
+      .#{$wgc-namespace}__#{$breakpoint-scope}-overflow--hidden {
+        overflow: hidden;
+      }
+
+      // Auto margin
+      .#{$wgc-namespace}__#{$breakpoint-scope}-margin--auto {
+        margin: auto;
+      }
+
+      // Vertical align
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-vertical-align--top {
+        vertical-align: top;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-vertical-align--middle {
+        vertical-align: middle;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-vertical-align--bottom {
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+

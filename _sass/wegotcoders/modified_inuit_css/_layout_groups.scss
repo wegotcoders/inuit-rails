@@ -1,0 +1,69 @@
+$wgc-guttering-options: (
+  (
+    dimension: 0,
+    bem-modifier: 'flush',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-guttering-option--flush
+  ),
+  (
+    dimension: quarter($wgc-bsu),
+    bem-modifier: 'one-quarter-bsu',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-guttering-option--one-quarter-bsu
+  ),
+  (
+    dimension: halve($wgc-bsu),
+    bem-modifier: 'one-half-bsu',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-guttering-option--one-half-bsu
+  ),
+  (
+    dimension: $wgc-bsu,
+    bem-modifier: 'one-bsu',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-guttering-option--one-bsu
+  ),
+  (
+    dimension: double($wgc-bsu),
+    bem-modifier: 'two-bsu',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-guttering-option--two-bsu
+  ),
+  (
+    dimension: quadruple($wgc-bsu),
+    bem-modifier: 'four-bsu',
+    allowed-breakpoints: $wgc-allowed-breakpoints-for-guttering-option--four-bsu
+  )
+) !default;
+
+@mixin wgc-layout-group($guttering-dimension, $bem-modifier, $breakpoint-scope, $allowed-breakpoints) {
+  @if (breakpoint-scope-is-allowed($breakpoint-scope, $allowed-breakpoints)) {
+
+    .#{$wgc-namespace}__#{$breakpoint-scope}-layout-group__container--#{$bem-modifier},
+    %#{$wgc-namespace}__#{$breakpoint-scope}-layout-group__container--#{$bem-modifier} {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      > .#{$wgc-namespace}__layout-group__member,
+      > %#{$wgc-namespace}__layout-group__member {
+        display: inline-block;
+        padding-left: 0;
+        padding-right: $guttering-dimension;
+
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+    }
+  }
+}
+
+@each $breakpoint in $wgc-breakpoints {
+  $breakpoint-scope: map-get($breakpoint, breakpoint-scope);
+
+  @include wgc-media-query($breakpoint-scope) {
+    @each $option in $wgc-guttering-options {
+      $dimension:           map-get($option, dimension);
+      $bem-modifier:        map-get($option, bem-modifier);
+      $allowed-breakpoints: map-get($option, allowed-breakpoints);
+
+      @include wgc-layout-group($dimension, $bem-modifier, $breakpoint-scope, $allowed-breakpoints)
+    }
+  }
+}

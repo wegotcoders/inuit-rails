@@ -1,0 +1,130 @@
+@each $breakpoint in $wgc-breakpoints {
+  $breakpoint-scope:    map-get($breakpoint, breakpoint-scope);
+  $allowed-breakpoints: $wgc-allowed-breakpoints-for-typography;
+
+  @if (breakpoint-scope-is-allowed($breakpoint-scope, $allowed-breakpoints)) {
+    @include wgc-media-query($breakpoint-scope) {
+
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-align--center {
+        text-align: center;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-align--justify {
+        text-align: justify;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-align--left {
+        text-align: left;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-align--right {
+        text-align: right;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-transform--uppercase {
+        text-transform: uppercase;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-decoration--none {
+        text-decoration: none;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-font-weight--bold {
+        font-weight: bold;
+      }
+
+      $wgc-font-sizes: (
+        (
+          scale-factor: 'one-hundred-and-five-percent',
+          value:        105%
+        ),
+        (
+          scale-factor: 'one-hundred-and-ten-percent',
+          value:        110%
+        ),
+        (
+          scale-factor: 'one-hundred-and-fifteen-percent',
+          value:        115%
+        ),
+        (
+          scale-factor: 'one-hundred-and-twenty-percent',
+          value:        120%
+        ),
+        (
+          scale-factor: 'one-hundred-and-twenty-five-percent',
+          value:        125%
+        ),
+        (
+          scale-factor: 'one-hundred-and-thirty-percent',
+          value:        130%
+        ),
+        (
+          scale-factor: 'one-hundred-and-thirty-five-percent',
+          value:        135%
+        ),
+        (
+          scale-factor: 'one-hundred-and-fourty-percent',
+          value:        140%
+        ),
+        (
+          scale-factor: 'one-hundred-and-fourty-five-percent',
+          value:        145%
+        ),
+        (
+          scale-factor: 'one-hundred-and-fifty-percent',
+          value:        150%
+        ),
+        (
+          scale-factor: 'one-hundred-and-fifty-five-percent',
+          value:        155%
+        ),
+        (
+          scale-factor: 'one-hundred-and-sixty-percent',
+          value:        160%
+        ),
+        (
+          scale-factor: 'one-hundred-and-sixty-five-percent',
+          value:        165%
+        ),
+        (
+          scale-factor: 'one-hundred-and-seventy-percent',
+          value:        170%
+        ),
+        (
+          scale-factor: 'one-hundred-and-seventy-five-percent',
+          value:        175%
+        ),
+        (
+          scale-factor: 'one-hundred-and-eighty-percent',
+          value:        180%
+        ),
+        (
+          scale-factor: 'one-hundred-and-eighty-five-percent',
+          value:        185%
+        ),
+        (
+          scale-factor: 'one-hundred-and-ninety-percent',
+          value:        190%
+        ),
+        (
+          scale-factor: 'one-hundred-and-ninety-five-percent',
+          value:        195%
+        ),
+        (
+          scale-factor: 'two-hundred-percent',
+          value:        200%
+        )
+      ) !default;
+
+      @each $font-size in $wgc-font-sizes {
+        $scale-factor: map-get($font-size, scale-factor);
+        $value:        map-get($font-size, value);
+
+        .#{$wgc-namespace}__#{$breakpoint-scope}-scale-font-size--#{$scale-factor} {
+          font-size: $value;
+        }
+      }
+    }
+  }
+}

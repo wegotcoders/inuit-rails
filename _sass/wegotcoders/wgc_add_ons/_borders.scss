@@ -1,0 +1,65 @@
+@each $breakpoint in $wgc-breakpoints {
+  $breakpoint-scope:    map-get($breakpoint, breakpoint-scope);
+  $allowed-breakpoints: $wgc-allowed-breakpoints-for-borders;
+
+  @if (breakpoint-scope-is-allowed($breakpoint-scope, $allowed-breakpoints)) {
+    @include wgc-media-query($breakpoint-scope) {
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-radius {
+        border-radius: $wgc-border-radius;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-radius--top-right {
+        border-top-right-radius: $wgc-border-radius;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-radius--bottom-right {
+        border-bottom-right-radius: $wgc-border-radius;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-radius--top-left {
+        border-top-left-radius: $wgc-border-radius;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-radius--bottom-left {
+        border-bottom-left-radius: $wgc-border-radius;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-width--thin {
+        border-width: thin;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-width--medium {
+        border-width: medium;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-width--thick {
+        border-width: thick;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-style--none {
+        border-style: none;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-style--solid {
+        border-style: solid;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-top-style--solid {
+        border-top-style: solid;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-right-style--solid {
+        border-right-style: solid;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-left-style--solid {
+        border-left-style: solid;
+      }
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-border-bottom-style--solid {
+        border-bottom-style: solid;
+      }
+    }
+  }
+}

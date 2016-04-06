@@ -1,0 +1,13 @@
+@each $breakpoint in $wgc-breakpoints {
+  $breakpoint-scope:    map-get($breakpoint, breakpoint-scope);
+  $allowed-breakpoints: $wgc-allowed-breakpoints-for-lists;
+
+  @if (breakpoint-scope-is-allowed($breakpoint-scope, $allowed-breakpoints)) {
+    @include wgc-media-query($breakpoint-scope) {
+
+      .#{$wgc-namespace}__#{$breakpoint-scope}-list-style--none {
+        list-style: none;
+      }
+    }
+  }
+}

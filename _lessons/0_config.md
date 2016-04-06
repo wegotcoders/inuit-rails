@@ -5,7 +5,7 @@ slug: configuration
 
 The defualt configuration variables are defined as follows in `_wgc_config.scss`:
 
-(For an example of how to override this please see `examples/main.scss` in the gem.)
+(For an example of how to override this please see `example/main.scss` in the gem.)
 
 {% highlight scss %}
   $wgc-bsu:                                                       24px    !default;

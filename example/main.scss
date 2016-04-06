@@ -36,7 +36,7 @@ $wgc-breakpoints: (
     breakpoint-scope:     'desk',
     breakpoint-condition: 'screen and (min-width: 64em)'
   )
-) !default;
+);
 
 $main-breakpoints: ('palm', 'lap-and-up', 'desk');
 

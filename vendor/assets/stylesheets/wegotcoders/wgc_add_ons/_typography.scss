@@ -6,31 +6,31 @@
     @include wgc-media-query($breakpoint-scope) {
 
 
-      .#{$wgc-namespace}__text-align--center {
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-align--center {
         text-align: center;
       }
 
-      .#{$wgc-namespace}__text-align--justify {
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-align--justify {
         text-align: justify;
       }
 
-      .#{$wgc-namespace}__text-align--left {
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-align--left {
         text-align: left;
       }
 
-      .#{$wgc-namespace}__text-align--right {
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-align--right {
         text-align: right;
       }
 
-      .#{$wgc-namespace}__text-transform--uppercase {
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-transform--uppercase {
         text-transform: uppercase;
       }
 
-      .#{$wgc-namespace}__text-decoration--none {
+      .#{$wgc-namespace}__#{$breakpoint-scope}-text-decoration--none {
         text-decoration: none;
       }
 
-      .#{$wgc-namespace}__font-weight--bold {
+      .#{$wgc-namespace}__#{$breakpoint-scope}-font-weight--bold {
         font-weight: bold;
       }
 
@@ -121,7 +121,7 @@
         $scale-factor: map-get($font-size, scale-factor);
         $value:        map-get($font-size, value);
 
-        .#{$wgc-namespace}__scale-font-size--#{$scale-factor} {
+        .#{$wgc-namespace}__#{$breakpoint-scope}-scale-font-size--#{$scale-factor} {
           font-size: $value;
         }
       }

@@ -45,14 +45,14 @@ https://github.com/inuitcss.
 
 A few of the files here have been included from the older inuitcss repo at
 https://github.com/csswizardry/inuit.css/ since they are not yet covered by the
-newest version. These are located in `/csswizardy`.
+newest version. These are located in `csswizardy/`.
 
-Some custom inuit-esque files are located in `wegotcoders/modified_inuit_css`.
+Some custom inuit-esque files are located in `wegotcoders/modified_inuit_css/`.
 The syntax here has been adapted for improved 'guessability'. In addition each
 class has been coupled to all of the breakpoints.
 
 Some extra helper files, including a color palette, are located in
-`wegotcoders/wgc_add_ons`. These can be useful
+`wegotcoders/wgc_add_ons/`. These can be useful
 for customising elements beyond the basic macros of the inuitcss
 classes.
 

@@ -13,24 +13,12 @@ $inuit-enable-btn--pill:  true;
 
 $wgc-breakpoints: (
   (
-    breakpoint-scope:     'all-devices',
-    breakpoint-condition: 'screen and (min-width: 0em)'
-  ),
-  (
     breakpoint-scope:     'palm',
     breakpoint-condition: 'screen and (max-width: 44.9375em)'
   ),
   (
-    breakpoint-scope:     'lap',
-    breakpoint-condition: 'screen and (min-width: 45em) and (max-width: 63.9375em)'
-  ),
-  (
     breakpoint-scope:     'lap-and-up',
     breakpoint-condition: 'screen and (min-width: 45em)'
-  ),
-  (
-    breakpoint-scope:     'portable',
-    breakpoint-condition: 'screen and (max-width: 63.9375em)'
   ),
   (
     breakpoint-scope:     'desk',
@@ -69,7 +57,7 @@ $wgc-allowed-breakpoints-for-column-group-nineteenths:          $main-breakpoint
 $wgc-allowed-breakpoints-for-column-group-twentieths:           ('palm');
 
 $wgc-allowed-breakpoints-for-paddings--none:                    $main-breakpoints;
-$wgc-allowed-breakpoints-for-paddings--one-quarter-bsu:         ('all-devices');
+$wgc-allowed-breakpoints-for-paddings--one-quarter-bsu:         ('lap-and-up');
 $wgc-allowed-breakpoints-for-paddings--one-half-bsu:            $main-breakpoints;
 $wgc-allowed-breakpoints-for-paddings--one-bsu:                 $main-breakpoints;
 $wgc-allowed-breakpoints-for-paddings--two-bsu:                 $main-breakpoints;

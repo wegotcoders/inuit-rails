@@ -10,30 +10,18 @@ For example,
 {% highlight scss %}
   $wgc-breakpoints: (
     (
-      breakpoint-scope:     'all-devices',
-      breakpoint-condition: 'screen and (min-width: 0em)'
-    ),
-    (
       breakpoint-scope:     'palm',
       breakpoint-condition: 'screen and (max-width: 44.9375em)'
-    ),
-    (
-      breakpoint-scope:     'lap',
-      breakpoint-condition: 'screen and (min-width: 45em) and (max-width: 63.9375em)'
     ),
     (
       breakpoint-scope:     'lap-and-up',
       breakpoint-condition: 'screen and (min-width: 45em)'
     ),
     (
-      breakpoint-scope:     'portable',
-      breakpoint-condition: 'screen and (max-width: 63.9375em)'
-    ),
-    (
       breakpoint-scope:     'desk',
       breakpoint-condition: 'screen and (min-width: 64em)'
     )
-  ) !default;
+  );
 {% endhighlight %}
 
 These breakpoints are iterated over by the `wgc-media-query` mixin defined in `_breakpoints.scss`

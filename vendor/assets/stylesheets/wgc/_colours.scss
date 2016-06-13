@@ -6,7 +6,7 @@ $pallete: (
   skeleton-blue:   #1eaedb,
   skeleton-text:   #222,
   black:           #000
-);
+) !default;
 
 @each $name, $colour in $pallete {
   .c-#{ $name } {
